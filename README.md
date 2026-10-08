@@ -5,8 +5,8 @@
 
 - 前端：原生 HTML + CSS + JavaScript（页面渲染 + 调用接口，无需 npm 构建）
 - 后端：Python Flask（页面路由 + JSON 接口）
-- 数据库：MySQL / MariaDB（7 张表，真实外键与事务）
-- 测试：pytest（105 条用例：92 通过 + 13 预期失败，对应 5 个刻意埋入的缺陷）
+- 数据库：MySQL / MariaDB（9 张表，真实外键与事务）
+- 测试：pytest（144 条用例：124 通过 + 20 预期失败，对应 8 个刻意埋入的缺陷）
 
 ---
 
@@ -44,7 +44,8 @@ database = easybuy_mall
 python init_db.py
 ```
 
-看到 `初始化完成` 即可。这一步会创建 `easybuy_mall` 库、7 张表，并写入 3 个用户和 6 个商品。
+看到 `初始化完成` 即可。这一步会创建 `easybuy_mall` 库、9 张表，
+并写入 3 个用户、6 个商品、6 张优惠券。
 
 ### 5. 启动服务
 
@@ -74,7 +75,8 @@ python app.py
 | 商品详情 | `/product/<id>` | 商品详情、按数量加购 |
 | 登录注册 | `/login` | 登录 / 注册，token 存 localStorage |
 | 购物车 | `/cart` | 勾选、改数量、删除、去结算 |
-| 我的订单 | `/orders` | 订单列表、支付、取消、查看明细 |
+| 我的订单 | `/orders` | 订单列表、支付、取消、优惠明细 |
+| 领券中心 | `/coupons` | 领券、我的券包（未使用 / 已使用 / 已过期） |
 
 > 想手工试缺陷：首页进「移动电源」（初始库存 3 件），开两个浏览器窗口同时下单，
 > 或者把同一笔订单点两次「取消」。具体步骤见 `docs/05-缺陷报告.md`。
@@ -86,31 +88,33 @@ python app.py
 ```
 easybuy-mall-test/
 ├── app.py                # Web 服务入口：页面路由 + JSON 接口
-├── service.py            # 业务逻辑层（5 处缺陷埋在这里，无特殊标记）
+├── service.py            # 业务逻辑层（8 处缺陷埋在这里，无特殊标记）
 ├── db.py                 # 数据库访问层：连接池 + 查询封装
 ├── config.py             # 数据库 / 服务 / 并发参数配置
 ├── init_db.py            # 建库建表灌数据 / 恢复初始数据
+├── demo_data.py          # 灌演示数据（几百条真实业务量级；`clear` 可清空）
 ├── requirements.txt
 ├── pytest.ini
 ├── sql/
-│   ├── schema.sql        # 建库建表（7 张表）
-│   └── seed.sql          # 初始数据（3 用户 / 6 商品 / 库存流水）
+│   ├── schema.sql        # 建库建表（9 张表）
+│   └── seed.sql          # 初始数据（3 用户 / 6 商品 / 6 优惠券 / 库存流水）
 ├── templates/            # Jinja2 页面模板
 │   ├── base.html  index.html  product.html
-│   ├── login.html cart.html   orders.html  404.html
+│   ├── login.html cart.html   orders.html  coupons.html  404.html
 ├── static/
 │   ├── style.css         # 全站样式
 │   └── app.js            # 前端公共库（API 封装 / 登录态 / 工具函数）
 ├── tools/
-│   └── verify_bugs.py    # 一键复现 5 个缺陷并打印证据
-├── tests/                # pytest 测试套件（105 条）
+│   └── verify_bugs.py    # 一键复现 8 个缺陷并打印证据
+├── tests/                # pytest 测试套件（144 条）
 │   ├── conftest.py       # 测试夹具：起服务、重置数据、客户端
 │   ├── client.py         # 无第三方依赖的接口客户端
 │   ├── test_user.py      # 用户模块（23 条）
 │   ├── test_product.py   # 商品模块（24 条）
 │   ├── test_cart.py      # 购物车模块（19 条）
-│   ├── test_order.py     # 订单模块（26 条 + 1 预期失败）
-│   └── bugs/             # 5 个缺陷的回归用例（12 条，全部预期失败）
+│   ├── test_order.py     # 订单模块（27 条，含 1 预期失败）
+│   ├── test_coupon.py    # 优惠券模块（31 条）
+│   └── bugs/             # 8 个缺陷的回归用例（20 条，全部预期失败）
 └── docs/                 # 测试文档（需求 / 接口 / 计划 / 用例 / 缺陷 / 报告）
 ```
 
@@ -146,14 +150,14 @@ pytest --cov=. --cov-report=html   # 看覆盖率
 
 ### 3. 缺陷验证
 
-`tests/bugs/` 下有 13 条用例，全部用 `xfail(strict=True)` 标记 ——
+`tests/bugs/` 下有 20 条用例，全部用 `xfail(strict=True)` 标记 ——
 **预期失败就是通过**：说明缺陷确实存在。哪天缺陷被修好了，用例会变成 `XPASS` 并报错，
 提醒你回归用例该更新了。这就是「缺陷即断言」的写法。
 
 想直接看现场证据，用这个脚本（需要服务在跑）：
 
 ```bash
-python tools/verify_bugs.py   # 一键复现 5 个缺陷，打印期望 vs 实际
+python tools/verify_bugs.py   # 一键复现 8 个缺陷，打印期望 vs 实际
 ```
 
 ---
@@ -167,12 +171,41 @@ python tools/verify_bugs.py   # 一键复现 5 个缺陷，打印期望 vs 实�
 | BUG-003 | 订单 | 严重 | 并发下单时「查库存」与「扣库存」非原子，导致超卖、库存为负 |
 | BUG-004 | 订单 | 严重 | 查询/取消订单不校验归属，可越权操作他人订单（IDOR） |
 | BUG-005 | 购物车 | 中 | 加购不校验数量，0 / 负数 / 超库存都能加入购物车 |
+| BUG-006 | 优惠券 | 高 | 已使用的优惠券仍可重复抵扣（下单不校验券状态） |
+| BUG-007 | 优惠券 | 严重 | 折扣券把「折扣率」当成「减免比例」，金额算反 |
+| BUG-008 | 优惠券 | 中 | 领券不校验每人限领张数，同一账号可无限领 |
 
 详细复现步骤、期望结果、实际结果、修复建议见 `docs/05-缺陷报告.md`。
 
 ---
 
-## 七、换端口 / 换数据库
+## 七、演示数据（让系统看起来像真在跑）
+
+`seed.sql` 只有最小基线（3 用户 / 6 商品），跑起来页面很空。
+`demo_data.py` 在这之上灌入「几个月真实运营」量级的数据，**不破坏缺陷复现**：
+
+```bash
+python demo_data.py          # 灌演示数据（幂等，可重复执行）
+python demo_data.py clear    # 清空演示数据，回到基线
+```
+
+灌完后大致规模：
+
+| 对象 | 数量 | 说明 |
+| --- | --- | --- |
+| 商品 | 66 | 基线 6 + 新增 60（各分类都有） |
+| 用户 | 33 | `demo` / `user_a` / `user_b` + 30 个 `user_01`~`user_30` |
+| 订单 | 220 | 已支付 130 / 待支付 55 / 已取消 35（含用券订单） |
+| 优惠券 | 6 种 | 满减 / 折扣 / 无门槛 / 过期券 |
+| 购物车 | 26 | 部分用户留有未结算购物车 |
+| 库存流水 | 全量 | 每一次库存变动都有对应 `stock_logs` 记录 |
+
+数据用固定随机种子（`random.seed`）生成，**每次灌出来的都一样**，
+方便你截图、录屏、做前后对比。同时保证 `stock == SUM(stock_logs.change_qty)` 恒等式成立。
+
+---
+
+## 八、换端口 / 换数据库
 
 ```bash
 python app.py 8080                    # 换服务端口

@@ -111,6 +111,11 @@ def page_orders():
     return render_template("orders.html")
 
 
+@app.route("/coupons")
+def page_coupons():
+    return render_template("coupons.html")
+
+
 # ==================================================================
 #  接口 · 系统
 # ==================================================================
@@ -200,12 +205,35 @@ def api_cart_remove(cart_id):
 
 
 # ==================================================================
+#  接口 · 优惠券
+# ==================================================================
+@app.route("/api/coupons")
+def api_coupon_list():
+    return ok({"items": service.list_coupons()})
+
+
+@app.route("/api/coupons/<int:coupon_id>/claim", methods=["POST"])
+def api_coupon_claim(coupon_id):
+    user = auth_user()
+    return ok(service.claim_coupon(user["id"], coupon_id))
+
+
+@app.route("/api/user/coupons")
+def api_my_coupons():
+    user = auth_user()
+    return ok({"items": service.list_user_coupons(user["id"], request.args.get("status"))})
+
+
+# ==================================================================
 #  接口 · 订单
 # ==================================================================
 @app.route("/api/orders", methods=["POST"])
 def api_order_create():
     user = auth_user()
-    return ok(service.create_order(user["id"], body().get("cartIds") or []))
+    b = body()
+    return ok(service.create_order(
+        user["id"], b.get("cartIds") or [], b.get("userCouponId")
+    ))
 
 
 @app.route("/api/orders")

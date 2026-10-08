@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block title %}领券中心 · 易淘商城{% endblock %}
+
+{% block content %}
+<h1 class="page-title">领券中心</h1>
+<p class="page-sub">数据表：<code>easybuy_mall.coupons</code> · <code>user_coupons</code></p>
+
+<div id="alert" class="alert"></div>
+
+<h2 class="sec-title">可领取的券</h2>
+<div id="coupon-list" class="coupon-grid"><div class="empty">加载中…</div></div>
+
+<h2 class="sec-title">我的券包</h2>
+<div id="my-coupons"><div class="empty">…</div></div>
+{% endblock %}
+
+{% block script %}
+<script>
+function faceText(c) {
+  if (c.type === "DISCOUNT") return (Number(c.value) * 10).toFixed(1) + "折";
+  return "¥" + Number(c.value).toFixed(2).replace(/\.00$/, "");
+}
+
+function condText(c) {
+  return Number(c.threshold) > 0
+    ? "满 " + Number(c.threshold).toFixed(0) + " 元可用"
+    : "无门槛";
+}
+
+function dateText(s) {
+  return s ? String(s).slice(0, 10) : "-";
+}
+
+async function loadCoupons() {
+  const box = document.getElementById("coupon-list");
+  const r = await API.get("/api/coupons");
+  if (!r.ok) {
+    box.innerHTML = '<div class="empty">加载失败：' + esc(r.message || r.code) + "</div>";
+    return;
+  }
+  const items = r.data.items;
+  if (!items.length) {
+    box.innerHTML = '<div class="empty">当前没有可领取的优惠券</div>';
+    return;
+  }
+
+  box.innerHTML = items.map(c => {
+    const remain = c.remain === -1 ? "不限量" : ("剩 " + c.remain + " 张");
+    const tag = c.type === "DISCOUNT" ? "折" : "减";
+    return `
+      <div class="coupon ${c.type}">
+        <div class="coupon-face">
+          <span class="coupon-tag">${tag}</span>
+          <span class="coupon-val">${esc(faceText(c))}</span>
+        </div>
+        <div class="coupon-body">
+          <div class="coupon-name">${esc(c.name)}</div>
+          <div class="coupon-cond">${esc(condText(c))} · ${esc(c.typeName)}</div>
+          <div class="coupon-meta">有效期至 ${dateText(c.valid_to)} · ${remain}</div>
+        </div>
+        <button class="primary sm" onclick="claim(${c.id}, this)">立即领取</button>
+      </div>`;
+  }).join("");
+}
+
+async function claim(couponId, btn) {
+  if (!API.token) {
+    showAlert("alert", "info", "请先登录再领券");
+    setTimeout(() => { location.href = "/login"; }, 900);
+    return;
+  }
+  btn.disabled = true;
+  const r = await API.post("/api/coupons/" + couponId + "/claim", {});
+  btn.disabled = false;
+  if (r.ok) {
+    showAlert("alert", "ok", "领取成功：" + r.data.couponName);
+    loadCoupons();
+    loadMine();
+  } else {
+    showAlert("alert", "err", "领取失败：" + (r.message || r.code));
+  }
+}
+
+const STATUS_TEXT_UC = { UNUSED: "未使用", USED: "已使用", EXPIRED: "已过期" };
+
+async function loadMine() {
+  const box = document.getElementById("my-coupons");
+  if (!API.token) {
+    box.innerHTML = '<div class="empty">登录后可以查看自己的券包</div>';
+    return;
+  }
+  const r = await API.get("/api/user/coupons");
+  if (!r.ok) {
+    box.innerHTML = '<div class="empty">加载失败：' + esc(r.message || r.code) + "</div>";
+    return;
+  }
+  const items = r.data.items;
+  if (!items.length) {
+    box.innerHTML = '<div class="empty">还没有券，去上面领一张</div>';
+    return;
+  }
+  box.innerHTML = `
+    <table>
+      <thead><tr>
+        <th style="width:70px">券号</th><th>优惠券</th><th style="width:110px">面额</th>
+        <th style="width:120px">条件</th><th style="width:90px">状态</th>
+        <th style="width:110px">有效期至</th>
+      </tr></thead>
+      <tbody>${items.map(c => `
+        <tr>
+          <td class="num">${c.id}</td>
+          <td>${esc(c.name)}</td>
+          <td class="num">${esc(faceText(c))}</td>
+          <td>${esc(condText(c))}</td>
+          <td>${statusBadgeUC(c.status)}</td>
+          <td>${dateText(c.valid_to)}</td>
+        </tr>`).join("")}
+      </tbody>
+    </table>`;
+}
+
+function statusBadgeUC(s) {
+  const cls = s === "UNUSED" ? "ok" : (s === "USED" ? "gray" : "warn");
+  return '<span class="badge ' + cls + '">' + (STATUS_TEXT_UC[s] || s) + "</span>";
+}
+
+loadCoupons();
+loadMine();
+</script>
+{% endblock %}

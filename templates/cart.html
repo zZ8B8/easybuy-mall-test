@@ -3,7 +3,7 @@
 
 {% block content %}
 <h1 class="page-title">我的购物车</h1>
-<p class="page-sub">数据表：<code>easybuy_mall.carts</code></p>
+<p class="page-sub">数据表：<code>easybuy_mall.carts</code> · <code>user_coupons</code> · <code>orders</code></p>
 
 <div id="alert" class="alert"></div>
 <div id="body"><div class="empty">加载中…</div></div>
@@ -12,6 +12,7 @@
 {% block script %}
 <script>
 let ROWS = [];
+let COUPONS = [];
 
 async function load() {
   const box = document.getElementById("body");
@@ -31,6 +32,11 @@ async function load() {
   }
 
   ROWS = r.data.items;
+
+  // 顺手把「我的未使用券」拉过来，结算时可以直接选
+  const cr = await API.get("/api/user/coupons?status=UNUSED");
+  COUPONS = cr.ok ? cr.data.items.filter(c => c.usable) : [];
+
   if (!ROWS.length) {
     box.innerHTML = '<div class="empty"><div class="big">🛒</div>' +
       '购物车还是空的<p style="margin-top:12px"><a class="btn primary" href="/">去挑点东西</a></p></div>';
@@ -64,6 +70,11 @@ function render() {
       </tr>`;
   }).join("");
 
+  const opts = COUPONS.length
+    ? '<option value="">不使用优惠券</option>' +
+      COUPONS.map(c => `<option value="${c.id}">${esc(c.name)}</option>`).join("")
+    : '<option value="">没有可用优惠券</option>';
+
   document.getElementById("body").innerHTML = `
     <table>
       <thead>
@@ -76,11 +87,17 @@ function render() {
       </thead>
       <tbody>${rows}</tbody>
     </table>
-    <div class="card" style="margin-top:16px;display:flex;justify-content:space-between;align-items:center">
-      <div>已选 <b id="picked">0</b> 件，合计
+    <div class="card" style="margin-top:16px;display:flex;justify-content:space-between;
+         align-items:center;gap:16px;flex-wrap:wrap">
+      <div>
+        已选 <b id="picked">0</b> 件，合计
         <span class="price" id="total" style="font-size:20px">¥0.00</span>
+        <div id="coupon-line" style="margin-top:8px;font-size:13px;color:#6b7280"></div>
       </div>
-      <button class="primary" onclick="checkout()">去结算</button>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <select id="coupon" onchange="calcTotal()" style="min-width:190px">${opts}</select>
+        <button class="primary" onclick="checkout()">去结算</button>
+      </div>
     </div>`;
 
   calcTotal();
@@ -88,6 +105,12 @@ function render() {
 
 function picked() {
   return [...document.querySelectorAll(".pick:checked")].map(c => Number(c.value));
+}
+
+function selectedCoupon() {
+  const sel = document.getElementById("coupon");
+  const id = sel ? Number(sel.value) : 0;
+  return COUPONS.find(c => c.id === id) || null;
 }
 
 function calcTotal() {
@@ -98,6 +121,28 @@ function calcTotal() {
   });
   document.getElementById("total").textContent = money(sum);
   document.getElementById("picked").textContent = n;
+
+  // ---------------------------------------------------------------
+  // 优惠预览。这里按「需求文档规定的算法」算，只为让界面好看：
+  //   满减 / 无门槛 -> 直接减券面金额
+  //   折扣          -> 减掉 (1 - 折扣率) 的部分，88 折即减 12%
+  // ⚠️ 界面预览和后端实算未必一致 —— 拿这个差额当对账线索。
+  // ---------------------------------------------------------------
+  const c = selectedCoupon();
+  const line = document.getElementById("coupon-line");
+  if (!c) {
+    line.textContent = "未使用优惠券，应付 " + money(sum);
+    return;
+  }
+  let cut;
+  if (c.type === "DISCOUNT") {
+    cut = Math.round(sum * (1 - Number(c.value)) * 100) / 100;
+  } else {
+    cut = Number(c.value);
+  }
+  cut = Math.min(cut, sum);
+  line.innerHTML = '优惠 -' + money(cut) + '（' + esc(c.name) + '）' +
+    ' &nbsp;→&nbsp; 应付 <b class="price">' + money(sum - cut) + '</b>';
 }
 
 async function changeQty(cartId, qty) {
@@ -116,11 +161,18 @@ async function checkout() {
   const ids = picked();
   if (!ids.length) { showAlert("alert", "info", "请先勾选要购买的商品"); return; }
 
-  const r = await API.post("/api/orders", { cartIds: ids });
+  const payload = { cartIds: ids };
+  const c = selectedCoupon();
+  if (c) payload.userCouponId = c.id;
+
+  const r = await API.post("/api/orders", payload);
   if (r.ok) {
     showAlert("alert", "ok",
-      "下单成功！订单号 " + r.data.id + "，金额 " + money(r.data.amount));
-    setTimeout(() => location.href = "/orders", 1100);
+      "下单成功！订单号 " + r.data.id +
+      "，小计 " + money(r.data.total_amount) +
+      "，优惠 " + money(r.data.discount_amount) +
+      "，实付 " + money(r.data.amount));
+    setTimeout(() => { location.href = "/orders"; }, 1600);
   } else {
     showAlert("alert", "err", "下单失败：" + (r.message || r.code));
   }

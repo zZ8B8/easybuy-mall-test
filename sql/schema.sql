@@ -15,11 +15,13 @@ CREATE DATABASE IF NOT EXISTS easybuy_mall
 USE easybuy_mall;
 
 -- 先删后建，保证每次执行都是干净结构（顺序：先子表后父表）
+DROP TABLE IF EXISTS user_coupons;
 DROP TABLE IF EXISTS stock_logs;
 DROP TABLE IF EXISTS order_items;
 DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS carts;
 DROP TABLE IF EXISTS sessions;
+DROP TABLE IF EXISTS coupons;
 DROP TABLE IF EXISTS products;
 DROP TABLE IF EXISTS users;
 
@@ -87,18 +89,77 @@ CREATE TABLE carts (
 
 
 -- ------------------------------------------------------------
+-- 优惠券模板表
+--   三种券型，靠 type 区分，value 的含义随 type 变化：
+--     THRESHOLD 满减券：满 threshold 元减 value 元
+--     DISCOUNT  折扣券：打 value 折（value = 0.88 表示 88 折，即实付 88%）
+--     FREE      无门槛券：直接减 value 元，不看门槛
+-- ------------------------------------------------------------
+CREATE TABLE coupons (
+    id              INT            NOT NULL AUTO_INCREMENT COMMENT '券ID',
+    code            VARCHAR(32)    NOT NULL                COMMENT '券码',
+    name            VARCHAR(60)    NOT NULL                COMMENT '券名称',
+    type            VARCHAR(20)    NOT NULL                COMMENT 'THRESHOLD 满减 / DISCOUNT 折扣 / FREE 无门槛',
+    threshold       DECIMAL(10,2)  NOT NULL DEFAULT 0.00   COMMENT '使用门槛：订单小计需满此金额',
+    value           DECIMAL(10,2)  NOT NULL                COMMENT '券值：满减/无门槛=减免金额，折扣=折扣率',
+    total_count     INT            NOT NULL DEFAULT 0      COMMENT '发放总量，0 表示不限量',
+    claimed_count   INT            NOT NULL DEFAULT 0      COMMENT '已领取数量',
+    per_user_limit  INT            NOT NULL DEFAULT 1      COMMENT '每个用户最多可领张数',
+    valid_from      DATETIME       NOT NULL                COMMENT '生效时间',
+    valid_to        DATETIME       NOT NULL                COMMENT '失效时间',
+    status          VARCHAR(20)    NOT NULL DEFAULT 'ACTIVE' COMMENT 'ACTIVE 可领 / DISABLED 停发',
+    created_at      DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_coupons_code (code)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='优惠券模板表';
+
+
+-- ------------------------------------------------------------
+-- 用户优惠券表（用户领到的每一张券）
+--   状态流转：UNUSED（未使用） -> USED（已使用）
+--                               -> EXPIRED（已过期）
+--
+--   注意：order_id 指向订单，但**故意不加外键约束** ——
+--   orders 表也引用本表的 id，两张表互相引用会形成循环依赖，
+--   建表顺序无法满足。生产环境里这种「跨表软引用」很常见。
+-- ------------------------------------------------------------
+CREATE TABLE user_coupons (
+    id          INT       NOT NULL AUTO_INCREMENT COMMENT '用户券ID',
+    user_id     INT       NOT NULL                COMMENT '持有用户',
+    coupon_id   INT       NOT NULL                COMMENT '券模板ID',
+    status      VARCHAR(20) NOT NULL DEFAULT 'UNUSED' COMMENT 'UNUSED / USED / EXPIRED',
+    order_id    INT       NULL                    COMMENT '使用该券的订单',
+    claimed_at  DATETIME  NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '领取时间',
+    used_at     DATETIME  NULL                    COMMENT '使用时间',
+    PRIMARY KEY (id),
+    KEY idx_uc_user (user_id),
+    KEY idx_uc_coupon (coupon_id),
+    CONSTRAINT fk_uc_user   FOREIGN KEY (user_id)   REFERENCES users (id),
+    CONSTRAINT fk_uc_coupon FOREIGN KEY (coupon_id) REFERENCES coupons (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户优惠券表';
+
+
+-- ------------------------------------------------------------
 -- 订单表
 --   状态机：PENDING（待支付） -> PAID（已支付）
 --                            -> CANCELLED（已取消）
+--
+--   金额三件套，测试对账时要能对上：
+--     total_amount    = 商品小计（各明细单价 × 数量之和）
+--     discount_amount = 优惠金额（用券减免的部分）
+--     amount          = 实付金额 = total_amount - discount_amount
 -- ------------------------------------------------------------
 CREATE TABLE orders (
-    id          INT            NOT NULL AUTO_INCREMENT COMMENT '订单ID',
-    user_id     INT            NOT NULL                COMMENT '下单用户',
-    amount      DECIMAL(10,2)  NOT NULL                COMMENT '订单总金额（元）',
-    status      VARCHAR(20)    NOT NULL DEFAULT 'PENDING' COMMENT 'PENDING / PAID / CANCELLED',
-    pay_type    VARCHAR(20)    NULL                    COMMENT '支付方式：ALIPAY / WECHAT',
-    created_at  DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
-    paid_at     DATETIME       NULL                    COMMENT '支付时间',
+    id               INT            NOT NULL AUTO_INCREMENT COMMENT '订单ID',
+    user_id          INT            NOT NULL                COMMENT '下单用户',
+    amount           DECIMAL(10,2)  NOT NULL                COMMENT '实付金额（元）',
+    total_amount     DECIMAL(10,2)  NOT NULL DEFAULT 0.00   COMMENT '商品小计（元）',
+    discount_amount  DECIMAL(10,2)  NOT NULL DEFAULT 0.00   COMMENT '优惠金额（元）',
+    user_coupon_id   INT            NULL                    COMMENT '使用的用户券ID（不加外键，见 user_coupons 注释）',
+    status           VARCHAR(20)    NOT NULL DEFAULT 'PENDING' COMMENT 'PENDING / PAID / CANCELLED',
+    pay_type         VARCHAR(20)    NULL                    COMMENT '支付方式：ALIPAY / WECHAT',
+    created_at       DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
+    paid_at          DATETIME       NULL                    COMMENT '支付时间',
     PRIMARY KEY (id),
     KEY idx_orders_user (user_id),
     KEY idx_orders_status (status),

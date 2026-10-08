@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""一键复现 5 个缺陷，打印现场证据。
+"""一键复现 8 个缺陷，打印现场证据。
 
 用法（需要服务已经在跑）：
     python app.py            # 另一个窗口先启动服务
@@ -7,6 +7,11 @@
 
 脚本会：重置数据 -> 逐个复现缺陷 -> 打印「期望 vs 实际」。
 跑完会自动重置一次数据。
+
+BUG-001 已取消订单仍可支付        BUG-005 加购不校验数量
+BUG-002 重复取消重复回滚库存      BUG-006 优惠券可重复使用
+BUG-003 并发下单超卖              BUG-007 折扣券金额算错
+BUG-004 越权访问他人订单          BUG-008 领券不限领
 """
 import json
 import os
@@ -233,6 +238,103 @@ def bug_005():
     print()
 
 
+# ------------------------------------------------------------------
+#  BUG-006 优惠券可重复使用
+# ------------------------------------------------------------------
+def bug_006():
+    print(LINE)
+    print("BUG-006 · 已使用的优惠券仍能重复抵扣（缺状态校验）")
+    print(LINE)
+    reset()
+    token = login("user_a")
+    mine = get("/api/user/coupons?status=UNUSED", token)["items"]
+    uc = [c for c in mine if c["coupon_id"] == 2][0]        # 满 100 减 20
+    print("   拿到券凭证 #%d：「%s」" % (uc["id"], uc["name"]))
+
+    cart = post("/api/cart/items", {"productId": 1, "quantity": 1}, token)
+    first = post("/api/orders", {"cartIds": [cart["cartId"]], "userCouponId": uc["id"]}, token)
+    used = get("/api/user/coupons?status=USED", token)["items"]
+    print("   第一单 #%d：小计 %.2f，优惠 %.2f，实付 %.2f"
+          % (first["id"], first["total_amount"], first["discount_amount"], first["amount"]))
+    print("   该券状态已变为：%s" % (used[0]["status"] if used else "?"))
+
+    cart2 = post("/api/cart/items", {"productId": 1, "quantity": 1}, token)
+    second = None
+    try:
+        second = post("/api/orders",
+                      {"cartIds": [cart2["cartId"]], "userCouponId": uc["id"]}, token)
+    except RuntimeError as exc:
+        print("   第二单被拒绝：%s" % exc)
+
+    verdict("同一张券第二次使用应返回 400（券已核销）",
+            ("第二单 #%d 又抵扣了 %.2f 元，实付只要 %.2f"
+             % (second["id"], second["discount_amount"], second["amount"]))
+            if second else "已拒绝",
+            second is None)
+    print()
+
+
+# ------------------------------------------------------------------
+#  BUG-007 折扣券金额算错
+# ------------------------------------------------------------------
+def bug_007():
+    print(LINE)
+    print("BUG-007 · 折扣券把「折扣率」当成「减免比例」，金额算错")
+    print(LINE)
+    reset()
+    token = login("user_a")
+    mine = get("/api/user/coupons?status=UNUSED", token)["items"]
+    uc = [c for c in mine if c["coupon_id"] == 4][0]        # 全场 88 折
+    print("   拿到券凭证 #%d：「%s」（券值 %.2f）" % (uc["id"], uc["name"], uc["value"]))
+
+    cart = post("/api/cart/items", {"productId": 1, "quantity": 1}, token)
+    order = post("/api/orders", {"cartIds": [cart["cartId"]], "userCouponId": uc["id"]}, token)
+
+    total = order["total_amount"]
+    expect_cut = round(total * 0.12, 2)     # 88 折 = 让利 12%
+    expect_pay = round(total - expect_cut, 2)
+
+    print("   订单小计 %.2f 元，用「全场 88 折」" % total)
+    print("   需求算法：88 折 -> 减 12%% -> 应减 %.2f，实付 %.2f" % (expect_cut, expect_pay))
+    print("   实际抵扣：减 %.2f，实付 %.2f" % (order["discount_amount"], order["amount"]))
+    verdict("应减 %.2f 元" % expect_cut,
+            "实际减了 %.2f 元，这一单平台少收 %.2f 元"
+            % (order["discount_amount"], order["discount_amount"] - expect_cut),
+            abs(order["discount_amount"] - expect_cut) < 0.01)
+    print()
+
+
+# ------------------------------------------------------------------
+#  BUG-008 领券不限领
+# ------------------------------------------------------------------
+def bug_008():
+    print(LINE)
+    print("BUG-008 · 领券不校验每人限领，同一账号可无限领同一张券")
+    print(LINE)
+    reset()
+    token = login("user_a")
+    info = [c for c in get("/api/coupons")["items"] if c["id"] == 1][0]
+    print("   券#1「%s」：每人限领 %d 张，发放总量 %d 张"
+          % (info["name"], info["per_user_limit"], info["total_count"]))
+    print("   user_a 初始已持有该券 1 张，现在连续领 5 次……")
+
+    ok = 0
+    for i in range(5):
+        try:
+            post("/api/coupons/1/claim", {}, token)
+            ok += 1
+        except RuntimeError as exc:
+            print("   第 %d 次领取被拒绝：%s" % (i + 1, exc))
+
+    have = [c for c in get("/api/user/coupons", token)["items"] if c["coupon_id"] == 1]
+    print("   5 次里成功了 %d 次；该账号名下现有「%s」共 %d 张"
+          % (ok, info["name"], len(have)))
+    verdict("最多只能持有 %d 张" % info["per_user_limit"],
+            "实际持有 %d 张，超发 %d 张" % (len(have), len(have) - info["per_user_limit"]),
+            len(have) <= info["per_user_limit"])
+    print()
+
+
 def main():
     print("")
     print(LINE)
@@ -248,7 +350,8 @@ def main():
         print("  请先在另一个窗口运行：python app.py")
         sys.exit(1)
 
-    for fn in (bug_001, bug_002, bug_003, bug_004, bug_005):
+    for fn in (bug_001, bug_002, bug_003, bug_004, bug_005,
+               bug_006, bug_007, bug_008):
         try:
             fn()
         except Exception as exc:  # noqa: BLE001
@@ -256,7 +359,7 @@ def main():
 
     reset()
     print(LINE)
-    print("  验证结束。5 个缺陷均能被稳定复现。")
+    print("  验证结束。8 个缺陷均能被稳定复现。")
     print("  交给开发修复后，再跑 pytest（tests/bugs/）做回归验证。")
     print(LINE)
     print("")

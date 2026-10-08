@@ -14,11 +14,13 @@ USE easybuy_mall;
 -- 表都很小，DELETE 更快。
 -- （代价：自增 ID 不会归零。测试用例不依赖固定 ID，所以无所谓。）
 SET FOREIGN_KEY_CHECKS = 0;
+DELETE FROM user_coupons;
 DELETE FROM stock_logs;
 DELETE FROM order_items;
 DELETE FROM orders;
 DELETE FROM carts;
 DELETE FROM sessions;
+DELETE FROM coupons;
 DELETE FROM products;
 DELETE FROM users;
 SET FOREIGN_KEY_CHECKS = 1;
@@ -57,3 +59,32 @@ INSERT INTO stock_logs (product_id, change_qty, reason) VALUES
     (4, 100, 'INIT'),
     (5, 20,  'INIT'),
     (6,  5,  'INIT');
+
+-- ------------------------------------------------------------
+-- 优惠券模板（6 张，覆盖三种券型 + 一张已过期的）
+--   有效期用 NOW() 相对计算，保证任何时候重置数据，券都是「当前有效」的，
+--   测试不会因为跑得久了就突然失败。
+--
+--   id=4 是折扣券：value=0.88 表示 **88 折**（实付 88%），
+--   这是需求定义，测试用例要按这个语义去验证金额。
+--   id=6 是过期券：valid_to 已经是 30 天前，用来测「过期券不可用」。
+-- ------------------------------------------------------------
+INSERT INTO coupons
+    (id, code, name, type, threshold, value, total_count, claimed_count, per_user_limit, valid_from, valid_to, status) VALUES
+    (1, 'NEW10',   '新人无门槛券 10 元',  'FREE',       0.00, 10.00, 1000, 1, 1, DATE_SUB(NOW(), INTERVAL 1 DAY),  DATE_ADD(NOW(), INTERVAL 365 DAY), 'ACTIVE'),
+    (2, 'FULL100', '满 100 减 20',        'THRESHOLD', 100.00, 20.00,  500, 2, 1, DATE_SUB(NOW(), INTERVAL 1 DAY),  DATE_ADD(NOW(), INTERVAL 365 DAY), 'ACTIVE'),
+    (3, 'FULL300', '满 300 减 50',        'THRESHOLD', 300.00, 50.00,  300, 0, 2, DATE_SUB(NOW(), INTERVAL 1 DAY),  DATE_ADD(NOW(), INTERVAL 365 DAY), 'ACTIVE'),
+    (4, 'DISC88',  '全场 88 折',          'DISCOUNT',    0.00,  0.88,  200, 1, 1, DATE_SUB(NOW(), INTERVAL 1 DAY),  DATE_ADD(NOW(), INTERVAL 365 DAY), 'ACTIVE'),
+    (5, 'DISC95',  '满 50 打 95 折',      'DISCOUNT',   50.00,  0.95,  500, 1, 3, DATE_SUB(NOW(), INTERVAL 1 DAY),  DATE_ADD(NOW(), INTERVAL 365 DAY), 'ACTIVE'),
+    (6, 'OLD5',    '满 50 减 5（已过期）', 'THRESHOLD',  50.00,  5.00,  100, 1, 1, DATE_SUB(NOW(), INTERVAL 90 DAY), DATE_SUB(NOW(), INTERVAL 30 DAY),  'ACTIVE');
+
+-- ------------------------------------------------------------
+-- 用户已领取的券（手工测试时直接就能下单用券，不用先手动领）
+-- ------------------------------------------------------------
+INSERT INTO user_coupons (id, user_id, coupon_id, status) VALUES
+    (1, 1, 1, 'UNUSED'),     -- user_a 持有：新人无门槛券
+    (2, 1, 2, 'UNUSED'),     -- user_a 持有：满 100 减 20
+    (3, 1, 4, 'UNUSED'),     -- user_a 持有：全场 88 折
+    (4, 2, 2, 'UNUSED'),     -- user_b 持有：满 100 减 20
+    (5, 3, 5, 'UNUSED'),     -- demo   持有：满 50 打 95 折
+    (6, 3, 6, 'EXPIRED');    -- demo   持有：已过期券
