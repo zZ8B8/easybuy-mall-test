@@ -11,9 +11,13 @@ venv/
 # IDE
 .idea/
 .vscode/
+.vs/
 *.swp
 .DS_Store
 
 # 运行产物
 *.log
 tools/_out/
+
+# 本地覆盖的配置（如果你不想把数据库密码提交上去）
+config_local.py

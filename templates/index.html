@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}商品列表 · 易淘商城{% endblock %}
+
+{% block content %}
+<h1 class="page-title">全部商品</h1>
+<p class="page-sub">商品数据来自 MySQL 数据库 <code>easybuy_mall.products</code></p>
+
+<div id="alert" class="alert"></div>
+
+<div class="toolbar">
+  <div class="grow">
+    <input id="kw" placeholder="在结果里筛选商品名…" oninput="filterLocal()">
+  </div>
+  <select id="cat" onchange="loadProducts()">
+    <option value="">全部分类</option>
+    <option value="数码">数码</option>
+    <option value="服饰">服饰</option>
+    <option value="食品">食品</option>
+  </select>
+  <select id="size" onchange="loadProducts()">
+    <option value="10">每页 10 条</option>
+    <option value="6">每页 6 条</option>
+    <option value="3">每页 3 条</option>
+  </select>
+  <button onclick="loadProducts()">刷新</button>
+</div>
+
+<div id="list" class="grid"></div>
+<div id="pager" class="toolbar" style="justify-content:center;margin-top:22px;"></div>
+{% endblock %}
+
+{% block script %}
+<script>
+let ALL = [];       // 当前页拿到的商品
+let PAGE = 1;
+
+async function loadProducts() {
+  const size = document.getElementById("size").value;
+  const cat = document.getElementById("cat").value;
+  let url = "/api/products?page=" + PAGE + "&size=" + size;
+  if (cat) url += "&category=" + encodeURIComponent(cat);
+
+  const r = await API.get(url);
+  if (!r.ok) {
+    showAlert("alert", "err", "加载失败：" + (r.message || r.code));
+    return;
+  }
+  ALL = r.data.items;
+  renderList();
+  renderPager(r.data);
+}
+
+function filterLocal() {
+  renderList();
+}
+
+function renderList() {
+  const kw = document.getElementById("kw").value.trim().toLowerCase();
+  const items = ALL.filter(p => !kw || p.name.toLowerCase().includes(kw));
+  const box = document.getElementById("list");
+
+  if (!items.length) {
+    box.innerHTML = '<div class="empty" style="grid-column:1/-1">' +
+                    '<div class="big">□</div>没有匹配的商品</div>';
+    return;
+  }
+
+  box.innerHTML = items.map(p => {
+    const stockCls = p.stock === 0 ? "zero" : (p.stock <= 5 ? "low" : "");
+    const stockTxt = p.stock === 0 ? "已售罄" : ("库存 " + p.stock + " 件");
+    const buyDisabled = p.stock === 0 ? "disabled" : "";
+    return `
+      <div class="product">
+        <a class="thumb" href="/product/${p.id}">📦</a>
+        <div class="info">
+          <a class="name" href="/product/${p.id}">${esc(p.name)}</a>
+          <span class="cat">${esc(p.category)} · 编号 ${p.id}</span>
+          <div class="price-row">
+            <span class="price"><small>¥</small>${Number(p.price).toFixed(2)}</span>
+            <span class="stock ${stockCls}">${stockTxt}</span>
+          </div>
+          <div class="acts">
+            <button class="sm" onclick="location.href='/product/${p.id}'">查看详情</button>
+            <button class="sm primary" ${buyDisabled}
+                    onclick="quickAdd(${p.id})">加入购物车</button>
+          </div>
+        </div>
+      </div>`;
+  }).join("");
+}
+
+function renderPager(d) {
+  const pages = Math.max(1, Math.ceil(d.total / d.size));
+  const el = document.getElementById("pager");
+  let html = '<button class="sm" onclick="go(' + (PAGE - 1) + ')" ' +
+             (PAGE <= 1 ? "disabled" : "") + '>上一页</button>';
+  html += '<span style="padding:0 12px;color:#6b7280;font-size:13px">第 ' +
+          PAGE + " / " + pages + " 页（共 " + d.total + " 件）</span>";
+  html += '<button class="sm" onclick="go(' + (PAGE + 1) + ')" ' +
+          (PAGE >= pages ? "disabled" : "") + '>下一页</button>';
+  el.innerHTML = html;
+}
+
+function go(p) { PAGE = p; loadProducts(); }
+
+async function quickAdd(pid) {
+  if (!API.token) {
+    showAlert("alert", "info", "请先登录再购买 — 正在跳转到登录页…");
+    setTimeout(() => location.href = "/login", 900);
+    return;
+  }
+  const r = await API.post("/api/cart/items", { productId: pid, quantity: 1 });
+  if (r.ok) showAlert("alert", "ok", "已加入购物车");
+  else showAlert("alert", "err", "加入失败：" + (r.message || r.code));
+}
+
+loadProducts();
+</script>
+{% endblock %}

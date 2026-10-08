@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}易淘商城{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="/">易淘商城</a>
+    <nav class="nav-links">
+      <a href="/">首页</a>
+      <a href="/cart">购物车</a>
+      <a href="/orders">我的订单</a>
+      <span id="nav-user" class="nav-user"></span>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    易淘商城 · 测试靶场项目 ·
+    <a href="/health" target="_blank">健康检查</a> ·
+    接口文档见 <code>docs/接口文档.md</code>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+{% block script %}{% endblock %}
+</body>
+</html>

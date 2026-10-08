@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}购物车 · 易淘商城{% endblock %}
+
+{% block content %}
+<h1 class="page-title">我的购物车</h1>
+<p class="page-sub">数据表：<code>easybuy_mall.carts</code></p>
+
+<div id="alert" class="alert"></div>
+<div id="body"><div class="empty">加载中…</div></div>
+{% endblock %}
+
+{% block script %}
+<script>
+let ROWS = [];
+
+async function load() {
+  const box = document.getElementById("body");
+
+  if (!API.token) {
+    box.innerHTML = '<div class="empty"><div class="big">🔒</div>' +
+      '请先登录才能查看购物车<p style="margin-top:12px">' +
+      '<a class="btn primary" href="/login">去登录</a></p></div>';
+    return;
+  }
+
+  const r = await API.get("/api/cart/items");
+  if (!r.ok) {
+    box.innerHTML = '<div class="empty"><div class="big">×</div>' +
+                    esc(r.message || r.code) + "</div>";
+    return;
+  }
+
+  ROWS = r.data.items;
+  if (!ROWS.length) {
+    box.innerHTML = '<div class="empty"><div class="big">🛒</div>' +
+      '购物车还是空的<p style="margin-top:12px"><a class="btn primary" href="/">去挑点东西</a></p></div>';
+    return;
+  }
+  render();
+}
+
+function render() {
+  let total = 0;
+  const rows = ROWS.map(row => {
+    const sub = Number(row.price) * Number(row.quantity);
+    total += sub;
+    return `
+      <tr>
+        <td>
+          <input type="checkbox" class="pick" value="${row.id}" checked
+                 onchange="calcTotal()" style="width:auto">
+        </td>
+        <td><a href="/product/${row.product_id}"><b>${esc(row.product_name)}</b></a></td>
+        <td class="num">${money(row.price)}</td>
+        <td>
+          <input type="number" value="${row.quantity}" style="width:78px"
+                 onchange="changeQty(${row.id}, this.value)">
+        </td>
+        <td class="num">${money(sub)}</td>
+        <td class="num" style="color:${row.stock <= 5 ? "#d97706" : "#6b7280"}">
+          ${row.stock}
+        </td>
+        <td><button class="sm" onclick="removeRow(${row.id})">删除</button></td>
+      </tr>`;
+  }).join("");
+
+  document.getElementById("body").innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th style="width:40px"></th>
+          <th>商品</th><th style="width:100px">单价</th>
+          <th style="width:110px">数量</th><th style="width:110px">小计</th>
+          <th style="width:80px">库存</th><th style="width:80px">操作</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <div class="card" style="margin-top:16px;display:flex;justify-content:space-between;align-items:center">
+      <div>已选 <b id="picked">0</b> 件，合计
+        <span class="price" id="total" style="font-size:20px">¥0.00</span>
+      </div>
+      <button class="primary" onclick="checkout()">去结算</button>
+    </div>`;
+
+  calcTotal();
+}
+
+function picked() {
+  return [...document.querySelectorAll(".pick:checked")].map(c => Number(c.value));
+}
+
+function calcTotal() {
+  const ids = picked();
+  let sum = 0, n = 0;
+  ROWS.forEach(r => {
+    if (ids.includes(r.id)) { sum += Number(r.price) * Number(r.quantity); n += 1; }
+  });
+  document.getElementById("total").textContent = money(sum);
+  document.getElementById("picked").textContent = n;
+}
+
+async function changeQty(cartId, qty) {
+  const r = await API.put("/api/cart/items/" + cartId, { quantity: Number(qty) });
+  if (r.ok) { showAlert("alert", "ok", "数量已更新"); load(); }
+  else showAlert("alert", "err", "更新失败：" + (r.message || r.code));
+}
+
+async function removeRow(cartId) {
+  const r = await API.del("/api/cart/items/" + cartId);
+  if (r.ok) { showAlert("alert", "ok", "已删除"); load(); }
+  else showAlert("alert", "err", "删除失败：" + (r.message || r.code));
+}
+
+async function checkout() {
+  const ids = picked();
+  if (!ids.length) { showAlert("alert", "info", "请先勾选要购买的商品"); return; }
+
+  const r = await API.post("/api/orders", { cartIds: ids });
+  if (r.ok) {
+    showAlert("alert", "ok",
+      "下单成功！订单号 " + r.data.id + "，金额 " + money(r.data.amount));
+    setTimeout(() => location.href = "/orders", 1100);
+  } else {
+    showAlert("alert", "err", "下单失败：" + (r.message || r.code));
+  }
+}
+
+load();
+</script>
+{% endblock %}

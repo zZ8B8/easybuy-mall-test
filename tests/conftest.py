@@ -1,115 +1,127 @@
 # -*- coding: utf-8 -*-
-"""pytest 公共装置（fixture）
+"""易淘商城 · pytest 公共 fixture
 
-- 整个测试会话共用一个 HTTP 服务实例（随机空闲端口）；
-- 每个用例开始前重置内存数据，用例之间互不污染；
-- 提供「已注册并登录」的客户端，省掉每个用例重复写注册/登录。
+测试跑的是**真实 HTTP 服务**（werkzeug 起在独立端口），不是 Flask 的测试客户端 ——
+这样测到的行为和你在浏览器 / Postman 里点出来的完全一致。
+
+独立性保证：每个用例执行前自动把数据库恢复到初始状态，
+用例之间不会互相污染，可以任意顺序、任意次数重跑。
 """
 import os
 import sys
+import threading
+import time
 
 import pytest
+from werkzeug.serving import make_server
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
-from sut import server as sut_server          # noqa: E402
-from sut.store import store                   # noqa: E402
-from tests.client import ApiClient            # noqa: E402
+import init_db  # noqa: E402
+from tests.client import ApiClient  # noqa: E402
+
+TEST_PORT = 5011
+BASE_URL = "http://127.0.0.1:%d" % TEST_PORT
 
 
-@pytest.fixture(scope="session")
-def api_base():
-    """启动服务，会话结束后关闭。port=0 由系统分配空闲端口。"""
-    httpd, base_url = sut_server.run_in_thread(port=0)
-    yield base_url
-    httpd.shutdown()
+class _ServerThread(threading.Thread):
+    def __init__(self, app, port):
+        super().__init__(daemon=True)
+        self._srv = make_server("127.0.0.1", port, app, threaded=True)
+
+    def run(self):
+        self._srv.serve_forever()
+
+    def stop(self):
+        self._srv.shutdown()
 
 
+# ----------------------------------------------------------------------
+# 整个测试会话共用一个服务进程
+# ----------------------------------------------------------------------
+@pytest.fixture(scope="session", autouse=True)
+def server():
+    from app import app
+
+    thread = _ServerThread(app, TEST_PORT)
+    thread.start()
+    time.sleep(0.8)          # 等服务真正开始监听
+    yield BASE_URL
+    thread.stop()
+
+
+# ----------------------------------------------------------------------
+# 每个用例前重置数据
+# ----------------------------------------------------------------------
 @pytest.fixture(autouse=True)
-def fresh_data():
-    """每个用例前清空数据并重新预置商品。"""
-    store.reset()
+def fresh_data(server):
+    """把数据库恢复到 sql/seed.sql 定义的初始状态。"""
+    init_db.reset_data()
     yield
 
 
 @pytest.fixture
-def api(api_base):
-    """未登录的客户端。"""
-    return ApiClient(api_base)
+def api(server):
+    """一个未登录的客户端。"""
+    return ApiClient(BASE_URL)
 
 
 @pytest.fixture
-def login(api):
-    """注册 + 登录，返回已带 token 的客户端。
+def client(server):
+    return ApiClient(BASE_URL)
 
-        def test_x(login):
-            alice = login("alice")
+
+@pytest.fixture
+def user_a(server):
+    """已登录的 user_a。"""
+    c = ApiClient(BASE_URL)
+    c.login("user_a")
+    return c
+
+
+@pytest.fixture
+def user_b(server):
+    """已登录的 user_b。"""
+    c = ApiClient(BASE_URL)
+    c.login("user_b")
+    return c
+
+
+# ----------------------------------------------------------------------
+# 数据库直连查询（做数据一致性校验用）
+# ----------------------------------------------------------------------
+@pytest.fixture
+def db():
+    """直接查数据库，用来核对接口返回的数据是不是真的落库了。
+
+    ⚠️ 必须开 autocommit：
+       MySQL 的默认隔离级别是 REPEATABLE READ，不开 autocommit 的话
+       这个连接上第一次 SELECT 会建立事务快照，之后再查都读的是旧数据 ——
+       你会看到「接口明明改了库，直连查询却纹丝不动」的假象。
     """
-    def _login(username, password="abc123", phone=None):
-        api.post("/api/user/register",
-                 {"username": username, "password": password, "phone": phone})
-        resp = api.post("/api/user/login",
-                        {"username": username, "password": password})
-        assert resp.status == 200, "登录失败：%s" % resp.payload
-        return ApiClient(api.base_url, token=resp.data["token"])
+    import pymysql
+    import config
 
-    return _login
-
-
-@pytest.fixture
-def user_a(login):
-    """默认用户 alice。"""
-    return login("alice")
+    conn = pymysql.connect(autocommit=True, **config.DB_CONFIG)
+    try:
+        yield conn
+    finally:
+        conn.close()
 
 
-@pytest.fixture
-def user_b(login):
-    """默认用户 bob（用于越权类用例）。"""
-    return login("bob")
+def stock_of(db, product_id):
+    """读某商品当前库存。"""
+    with db.cursor() as cur:
+        cur.execute("SELECT stock FROM products WHERE id = %s", (product_id,))
+        row = cur.fetchone()
+        return row[0] if row else None
 
 
-@pytest.fixture
-def find_product(api):
-    """按名称片段查商品，返回商品对象。避免用例硬编码商品 ID。"""
-    def _find(keyword):
-        resp = api.get("/api/products?page=1&size=50")
-        assert resp.status == 200, resp.payload
-        for item in resp.data["items"]:
-            if keyword in item["name"]:
-                return item
-        raise AssertionError("找不到商品：%s" % keyword)
-
-    return _find
-
-
-@pytest.fixture
-def stock_of():
-    """读取某商品当前库存（直接读内存，不经 HTTP）。"""
-    def _stock(product_id):
-        return store.products[product_id]["stock"]
-
-    return _stock
-
-
-@pytest.fixture
-def add_cart():
-    """把商品加入购物车，返回 cart_id。"""
-    def _add(client, product, quantity=1):
-        resp = client.post("/api/cart/items",
-                           {"productId": product["id"], "quantity": quantity})
-        assert resp.status == 200, "加购失败：%s" % resp.payload
-        return resp.data["cartId"]
-
-    return _add
-
-
-@pytest.fixture
-def make_order(add_cart):
-    """加购并下单，返回 (cart_id, 下单响应)。"""
-    def _make(client, product, quantity=1):
-        cart_id = add_cart(client, product, quantity)
-        return cart_id, client.post("/api/orders", {"cartIds": [cart_id]})
-
-    return _make
+def order_status(db, order_id):
+    """读某订单当前状态。"""
+    with db.cursor() as cur:
+        cur.execute("SELECT status FROM orders WHERE id = %s", (order_id,))
+        row = cur.fetchone()
+        return row[0] if row else None

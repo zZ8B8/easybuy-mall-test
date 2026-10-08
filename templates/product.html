@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}商品详情 · 易淘商城{% endblock %}
+
+{% block content %}
+<div id="alert" class="alert"></div>
+<div id="body"><div class="empty">加载中…</div></div>
+{% endblock %}
+
+{% block script %}
+<script>
+const PID = {{ product_id }};
+
+async function load() {
+  const r = await API.get("/api/products/" + PID);
+  const box = document.getElementById("body");
+
+  if (!r.ok) {
+    box.innerHTML = '<div class="empty"><div class="big">×</div>' +
+                    esc(r.message || "商品不存在") + '<p><a href="/">返回首页</a></p></div>';
+    return;
+  }
+
+  const p = r.data;
+  const stockCls = p.stock === 0 ? "zero" : (p.stock <= 5 ? "low" : "");
+  const stockTxt = p.stock === 0 ? "已售罄" : ("库存 " + p.stock + " 件");
+
+  box.innerHTML = `
+    <div class="card" style="padding:26px">
+      <div class="detail">
+        <div class="hero">📦</div>
+        <div>
+          <h1>${esc(p.name)}</h1>
+          <div class="meta">
+            商品编号 ${p.id} ·
+            分类 <span class="tag">${esc(p.category)}</span> ·
+            <span class="stock ${stockCls}">${stockTxt}</span>
+          </div>
+          <div class="price-big">${money(p.price)}</div>
+          <p style="color:#4b5563;margin:0 0 6px">${esc(p.description || "暂无描述")}</p>
+          <div class="buy">
+            <input id="qty" type="number" value="1" min="1">
+            <button class="primary" onclick="addCart()" ${p.stock === 0 ? "disabled" : ""}>
+              加入购物车
+            </button>
+            <button onclick="location.href='/cart'">去购物车</button>
+            <button onclick="location.href='/'">继续逛</button>
+          </div>
+          <p style="color:#9ca3af;font-size:12.5px;margin-top:14px">
+            试试把数量填成 0、-3 或 999 —— 看看会发生什么。
+          </p>
+        </div>
+      </div>
+    </div>`;
+}
+
+async function addCart() {
+  if (!API.token) {
+    showAlert("alert", "info", "请先登录 — 正在跳转…");
+    setTimeout(() => location.href = "/login", 900);
+    return;
+  }
+  const qty = Number(document.getElementById("qty").value);
+  const r = await API.post("/api/cart/items", { productId: PID, quantity: qty });
+  if (r.ok) showAlert("alert", "ok", "已加入购物车（数量 " + r.data.quantity + "）");
+  else showAlert("alert", "err", "加入失败：" + (r.message || r.code));
+}
+
+load();
+</script>
+{% endblock %}

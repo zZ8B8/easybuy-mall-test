@@ -1,95 +1,170 @@
 # -*- coding: utf-8 -*-
-"""用户模块 · 功能测试
+"""用户模块 · 接口测试
 
-覆盖注册、登录、鉴权三类场景，全部用例均应通过。
-用例编号与 docs/测试用例.md 一一对应。
+覆盖：注册（等价类 + 边界）、登录（等价类）、鉴权（异常场景）
 """
+import uuid
+
 import pytest
 
 
-class TestRegister(object):
-    """注册"""
+def uniq(prefix="u"):
+    return "%s_%s" % (prefix, uuid.uuid4().hex[:8])
+
+
+# ======================================================================
+# 注册
+# ======================================================================
+class TestRegister:
 
     def test_register_success(self, api):
-        """TC-USER-001 正常注册成功"""
-        resp = api.post("/api/user/register", {
-            "username": "alice", "password": "abc123", "phone": "15576039320"})
-        assert resp.status == 200
-        assert resp.code == "OK"
-        assert resp.data["username"] == "alice"
-        assert resp.data["userId"].startswith("U")
+        """正常注册：返回用户 ID 和用户名"""
+        name = uniq()
+        status, body = api.register(name, "abc123", "13800001111")
+        assert status == 200
+        assert body["code"] == "OK"
+        assert body["data"]["username"] == name
+        assert isinstance(body["data"]["userId"], int)
 
     def test_register_duplicate_username(self, api):
-        """TC-USER-002 用户名重复注册被拒绝"""
-        body = {"username": "alice", "password": "abc123", "phone": "15576039320"}
-        assert api.post("/api/user/register", body).status == 200
-        resp = api.post("/api/user/register", body)
-        assert resp.status == 400
-        assert resp.code == "USER_EXISTS"
-
-    @pytest.mark.parametrize("password,expect_len", [
-        ("", 0), ("12345", 5), ("a", 1),
-    ])
-    def test_register_password_too_short(self, api, password, expect_len):
-        """TC-USER-003 密码长度不足 6 位被拒绝（边界值：0 / 5 / 1）"""
-        resp = api.post("/api/user/register", {
-            "username": "u%s" % expect_len, "password": password, "phone": "15576039320"})
-        assert resp.status == 400
-        assert resp.code in ("WEAK_PASSWORD", "INVALID_PARAM")
-
-    @pytest.mark.parametrize("phone", ["123", "155760393201", "1557603932a"])
-    def test_register_invalid_phone(self, api, phone):
-        """TC-USER-004 手机号格式非法被拒绝（边界值：过短 / 过长 / 含字母）"""
-        resp = api.post("/api/user/register", {
-            "username": "phone_case", "password": "abc123", "phone": phone})
-        assert resp.status == 400
-        assert resp.code == "INVALID_PHONE"
+        """等价类-无效：用户名已存在"""
+        status, body = api.register("user_a", "123456")
+        assert status == 400
+        assert body["code"] == "USERNAME_EXISTS"
+        assert "已被占用" in body["message"]
 
     def test_register_empty_username(self, api):
-        """TC-USER-005 用户名为空被拒绝"""
-        resp = api.post("/api/user/register", {
-            "username": "", "password": "abc123", "phone": "15576039320"})
-        assert resp.status == 400
-        assert resp.code == "INVALID_PARAM"
+        """边界-空值：用户名为空字符串"""
+        status, body = api.register("", "123456")
+        assert status == 400
+        assert body["code"] == "INVALID_PARAM"
+
+    def test_register_blank_username(self, api):
+        """边界-空值：用户名只有空格（应被 strip 后判空）"""
+        status, body = api.register("   ", "123456")
+        assert status == 400
+        assert body["code"] == "INVALID_PARAM"
+
+    def test_register_missing_password(self, api):
+        """边界-空值：密码为空"""
+        status, body = api.register(uniq(), "")
+        assert status == 400
+        assert body["code"] == "INVALID_PARAM"
+
+    def test_register_without_phone(self, api):
+        """等价类：手机号是选填项"""
+        status, body = api.register(uniq(), "123456")
+        assert status == 200
+        assert body["code"] == "OK"
+
+    def test_register_username_trimmed(self, api):
+        """等价类：用户名前后的空格应被去掉"""
+        name = uniq()
+        status, body = api.register("  %s  " % name, "123456")
+        assert status == 200
+        assert body["data"]["username"] == name
+
+    @pytest.mark.parametrize("length", [1, 50])
+    def test_register_username_length_boundary(self, api, length):
+        """边界值：用户名长度 1 和 50（字段上限）"""
+        name = "a" * length
+        status, body = api.register(name, "123456")
+        assert status == 200, "长度 %d 应当可以注册：%s" % (length, body)
 
 
-class TestLogin(object):
-    """登录"""
+# ======================================================================
+# 登录
+# ======================================================================
+class TestLogin:
 
     def test_login_success(self, api):
-        """TC-USER-006 正确账号密码登录成功并返回 token"""
-        api.post("/api/user/register", {
-            "username": "alice", "password": "abc123", "phone": "15576039320"})
-        resp = api.post("/api/user/login", {"username": "alice", "password": "abc123"})
-        assert resp.status == 200
-        assert resp.data["token"].startswith("T")
+        """正常登录：返回 token"""
+        status, body = api.post(
+            "/api/user/login", {"username": "user_a", "password": "123456"}
+        )
+        assert status == 200
+        assert body["code"] == "OK"
+        assert len(body["data"]["token"]) == 32
 
     def test_login_wrong_password(self, api):
-        """TC-USER-007 密码错误返回 401"""
-        api.post("/api/user/register", {
-            "username": "alice", "password": "abc123", "phone": "15576039320"})
-        resp = api.post("/api/user/login", {"username": "alice", "password": "wrong!"})
-        assert resp.status == 401
-        assert resp.code == "LOGIN_FAILED"
+        """等价类-无效：密码错误 -> 401"""
+        status, body = api.post(
+            "/api/user/login", {"username": "user_a", "password": "wrong"}
+        )
+        assert status == 401
+        assert body["code"] == "LOGIN_FAILED"
 
-    def test_login_unknown_user(self, api):
-        """TC-USER-008 不存在的用户返回 401"""
-        resp = api.post("/api/user/login", {"username": "nobody", "password": "abc123"})
-        assert resp.status == 401
-        assert resp.code == "LOGIN_FAILED"
+    def test_login_user_not_exist(self, api):
+        """等价类-无效：用户不存在，错误码与密码错误一致（不泄露账号是否存在）"""
+        status, body = api.post(
+            "/api/user/login", {"username": "no_such_user", "password": "123456"}
+        )
+        assert status == 401
+        assert body["code"] == "LOGIN_FAILED"
+
+    def test_login_empty_password(self, api):
+        """边界-空值：密码为空"""
+        status, body = api.post(
+            "/api/user/login", {"username": "user_a", "password": ""}
+        )
+        assert status == 401
+
+    def test_login_missing_body(self, api):
+        """异常场景：完全不传请求体"""
+        status, body = api.post("/api/user/login", {})
+        assert status == 401
+
+    def test_login_twice_gets_different_token(self, api):
+        """等价类：两次登录得到不同的 token（各自独立会话）"""
+        _, b1 = api.post("/api/user/login", {"username": "user_a", "password": "123456"})
+        _, b2 = api.post("/api/user/login", {"username": "user_a", "password": "123456"})
+        assert b1["data"]["token"] != b2["data"]["token"]
+
+    def test_old_token_still_valid_after_new_login(self, api):
+        """等价类：新登录不应让旧 token 失效（当前设计为多端共存）"""
+        _, b1 = api.post("/api/user/login", {"username": "user_a", "password": "123456"})
+        token1 = b1["data"]["token"]
+        api.post("/api/user/login", {"username": "user_a", "password": "123456"})
+
+        status, body = api.get("/api/user/profile", token=token1)
+        assert status == 200
+        assert body["code"] == "OK"
+        assert body["data"]["username"] == "user_a"
 
 
-class TestAuth(object):
-    """鉴权"""
+# ======================================================================
+# 鉴权
+# ======================================================================
+class TestAuth:
 
-    def test_cart_requires_token(self, api):
-        """TC-USER-009 未携带 token 访问购物车返回 401"""
-        resp = api.get("/api/cart/items")
-        assert resp.status == 401
-        assert resp.code == "UNAUTHORIZED"
+    def test_profile_without_token(self, api):
+        """异常场景：不带 token 访问需要登录的接口"""
+        status, body = api.get("/api/user/profile")
+        assert status == 401
+        assert body["code"] == "UNAUTHORIZED"
 
-    def test_invalid_token_rejected(self, api):
-        """TC-USER-010 伪造 token 被拒绝"""
-        resp = api.get("/api/cart/items", token="T99999")
-        assert resp.status == 401
-        assert resp.code == "UNAUTHORIZED"
+    def test_profile_with_fake_token(self, api):
+        """异常场景：伪造 token"""
+        status, body = api.get("/api/user/profile", token="fake_token_1234567890")
+        assert status == 401
+        assert body["code"] == "UNAUTHORIZED"
+
+    def test_profile_with_empty_token(self, api):
+        """边界-空值：Authorization 头为空"""
+        status, body = api.get("/api/user/profile", token="")
+        assert status == 401
+
+    def test_profile_with_valid_token(self, user_a):
+        """正常场景：带有效 token"""
+        status, body = user_a.get("/api/user/profile")
+        assert status == 200
+        assert body["data"]["username"] == "user_a"
+
+    @pytest.mark.parametrize(
+        "path", ["/api/cart/items", "/api/orders", "/api/user/profile"]
+    )
+    def test_protected_endpoints_require_auth(self, api, path):
+        """等价类：所有需要登录的接口，未登录都应返回 401"""
+        status, body = api.get(path)
+        assert status == 401
+        assert body["code"] == "UNAUTHORIZED"

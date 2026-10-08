@@ -1,88 +1,154 @@
 # -*- coding: utf-8 -*-
-"""购物车模块 · 功能测试
+"""购物车模块 · 接口测试
 
-覆盖加购、累加、改数量、删除，以及不同用户之间的数据隔离。
+覆盖：加购（正常 / 累加 / 异常）、查询、改数量、删除、用户隔离
 """
 import pytest
 
 
-class TestCartAdd(object):
-    """加入购物车"""
+class TestCartAdd:
 
-    def test_add_success(self, user_a, find_product):
-        """TC-CART-001 加入购物车成功"""
-        product = find_product("蓝牙耳机")
-        resp = user_a.post("/api/cart/items",
-                           {"productId": product["id"], "quantity": 2})
-        assert resp.status == 200
-        assert resp.data["quantity"] == 2
+    def test_add_new_item(self, user_a):
+        """正常：加入一件新商品"""
+        status, body = user_a.add_to_cart(1, 2)
+        assert status == 200
+        assert body["code"] == "OK"
+        assert body["data"]["quantity"] == 2
 
-    def test_add_same_product_accumulates(self, user_a, find_product):
-        """TC-CART-002 同一商品重复加购数量累加"""
-        product = find_product("蓝牙耳机")
-        user_a.post("/api/cart/items", {"productId": product["id"], "quantity": 2})
-        resp = user_a.post("/api/cart/items", {"productId": product["id"], "quantity": 3})
-        assert resp.data["quantity"] == 5
-        assert len(user_a.get("/api/cart/items").data["items"]) == 1
+    def test_add_same_product_twice_accumulates(self, user_a):
+        """等价类：同一商品重复加购，数量累加而不是新增一行"""
+        user_a.add_to_cart(1, 2)
+        user_a.add_to_cart(1, 3)
+        items = user_a.cart_items()
+        assert len(items) == 1, "同一商品应合并成一行"
+        assert items[0]["quantity"] == 5
 
-    def test_add_unknown_product(self, user_a):
-        """TC-CART-003 加入不存在的商品返回 404"""
-        resp = user_a.post("/api/cart/items", {"productId": "P99999", "quantity": 1})
-        assert resp.status == 404
-        assert resp.code == "PRODUCT_NOT_FOUND"
+    def test_add_multiple_products(self, user_a):
+        """等价类：加购多个不同商品"""
+        user_a.add_to_cart(1, 1)
+        user_a.add_to_cart(4, 1)
+        assert len(user_a.cart_items()) == 2
 
-    def test_cart_isolated_between_users(self, user_a, user_b, find_product):
-        """TC-CART-004 用户之间购物车数据互不可见"""
-        product = find_product("蓝牙耳机")
-        user_a.post("/api/cart/items", {"productId": product["id"], "quantity": 2})
-        assert user_b.get("/api/cart/items").data["items"] == []
+    def test_add_product_not_exist(self, user_a):
+        """异常场景：商品不存在 -> 404"""
+        status, body = user_a.add_to_cart(99999, 1)
+        assert status == 404
+        assert body["code"] == "PRODUCT_NOT_FOUND"
 
-    def test_cart_item_contains_product_snapshot(self, user_a, find_product):
-        """TC-CART-005 购物车条目带商品名称与单价快照"""
-        product = find_product("蓝牙耳机")
-        user_a.post("/api/cart/items", {"productId": product["id"], "quantity": 1})
-        item = user_a.get("/api/cart/items").data["items"][0]
-        assert item["product_name"] == "无线蓝牙耳机"
-        assert item["price"] == 199.00
+    def test_add_without_quantity(self, user_a):
+        """异常场景：缺少 quantity 字段"""
+        status, body = user_a.post("/api/cart/items", {"productId": 1})
+        assert status == 400
+        assert body["code"] == "INVALID_PARAM"
+
+    def test_add_requires_login(self, api):
+        """异常场景：未登录不能加购"""
+        status, body = api.add_to_cart(1, 1)
+        assert status == 401
+
+    def test_add_quantity_over_stock_accepted(self, user_a):
+        """当前行为：加购数量超过库存也会被接受（库存校验在下单时做）
+
+        见 BUG-005。这条用例锁定「现状」，等缺陷修复后应当改为断言 400。
+        """
+        status, body = user_a.add_to_cart(3, 999)     # 商品 3 库存只有 3
+        assert status == 200, "当前实现不校验加购数量"
 
 
-class TestCartManage(object):
-    """购物车条目管理"""
+class TestCartQuery:
 
-    def test_update_quantity(self, user_a, find_product):
-        """TC-CART-006 修改购物车数量生效"""
-        product = find_product("蓝牙耳机")
-        cart_id = user_a.post("/api/cart/items",
-                              {"productId": product["id"], "quantity": 2}).data["cartId"]
-        resp = user_a.put("/api/cart/items/%s" % cart_id, {"quantity": 7})
-        assert resp.status == 200
-        assert resp.data["quantity"] == 7
+    def test_empty_cart(self, user_a):
+        """边界-空：新用户的购物车是空的"""
+        status, body = user_a.get("/api/cart/items")
+        assert status == 200
+        assert body["data"]["items"] == []
 
-    def test_update_unknown_item(self, user_a):
-        """TC-CART-007 修改不存在的条目返回 404"""
-        resp = user_a.put("/api/cart/items/C99999", {"quantity": 1})
-        assert resp.status == 404
-        assert resp.code == "CART_NOT_FOUND"
+    def test_cart_item_fields(self, user_a):
+        """正常：购物车行包含商品名、单价、库存等联表字段"""
+        user_a.add_to_cart(2, 1)
+        item = user_a.cart_items()[0]
+        assert item["product_name"] == "机械键盘 87键"
+        assert item["price"] == 329.5
+        assert item["stock"] == 8
 
-    def test_remove_item(self, user_a, find_product):
-        """TC-CART-008 删除条目后购物车为空"""
-        product = find_product("蓝牙耳机")
-        cart_id = user_a.post("/api/cart/items",
-                              {"productId": product["id"], "quantity": 2}).data["cartId"]
-        assert user_a.delete("/api/cart/items/%s" % cart_id).status == 200
-        assert user_a.get("/api/cart/items").data["items"] == []
 
-    def test_remove_unknown_item(self, user_a):
-        """TC-CART-009 删除不存在的条目返回 404"""
-        resp = user_a.delete("/api/cart/items/C99999")
-        assert resp.status == 404
-        assert resp.code == "CART_NOT_FOUND"
+class TestCartUpdate:
 
-    @pytest.mark.parametrize("cart_ids,expected", [
-        ([], "EMPTY_CART"),
-    ])
-    def test_order_requires_at_least_one_item(self, user_a, cart_ids, expected):
-        """TC-CART-010 购物车为空时不能下单"""
-        resp = user_a.post("/api/orders", {"cartIds": cart_ids})
-        assert resp.status == 400
-        assert resp.code == expected
+    def test_update_quantity(self, user_a):
+        """正常：修改数量"""
+        user_a.add_to_cart(1, 1)
+        cid = user_a.cart_items()[0]["id"]
+        status, body = user_a.put("/api/cart/items/%s" % cid, {"quantity": 7})
+        assert status == 200
+        assert body["data"]["quantity"] == 7
+        assert user_a.cart_items()[0]["quantity"] == 7
+
+    def test_update_to_zero(self, user_a):
+        """边界值：数量改成 0（当前实现允许）"""
+        user_a.add_to_cart(1, 1)
+        cid = user_a.cart_items()[0]["id"]
+        status, body = user_a.put("/api/cart/items/%s" % cid, {"quantity": 0})
+        assert status == 200
+        assert body["data"]["quantity"] == 0
+
+    def test_update_negative_quantity(self, user_a):
+        """边界值：数量改成负数（当前实现允许）"""
+        user_a.add_to_cart(1, 1)
+        cid = user_a.cart_items()[0]["id"]
+        status, body = user_a.put("/api/cart/items/%s" % cid, {"quantity": -5})
+        assert status == 200
+        assert body["data"]["quantity"] == -5
+
+    def test_update_not_exist(self, user_a):
+        """异常场景：购物车行不存在 -> 404"""
+        status, body = user_a.put("/api/cart/items/99999", {"quantity": 1})
+        assert status == 404
+        assert body["code"] == "CART_NOT_FOUND"
+
+
+class TestCartDelete:
+
+    def test_delete_item(self, user_a):
+        """正常：删除购物车行"""
+        user_a.add_to_cart(1, 1)
+        cid = user_a.cart_items()[0]["id"]
+        status, body = user_a.delete("/api/cart/items/%s" % cid)
+        assert status == 200
+        assert user_a.cart_items() == []
+
+    def test_delete_not_exist(self, user_a):
+        """异常场景：删除不存在的行 -> 404"""
+        status, body = user_a.delete("/api/cart/items/99999")
+        assert status == 404
+
+    def test_delete_twice(self, user_a):
+        """幂等性：重复删除第二次应返回 404"""
+        user_a.add_to_cart(1, 1)
+        cid = user_a.cart_items()[0]["id"]
+        assert user_a.delete("/api/cart/items/%s" % cid)[0] == 200
+        assert user_a.delete("/api/cart/items/%s" % cid)[0] == 404
+
+
+class TestCartIsolation:
+    """购物车必须按用户隔离 —— 这是最基本的数据权限"""
+
+    def test_cart_not_shared_between_users(self, user_a, user_b):
+        """用户隔离：A 加购的商品不应出现在 B 的购物车里"""
+        user_a.add_to_cart(1, 1)
+        assert len(user_a.cart_items()) == 1
+        assert user_b.cart_items() == []
+
+    def test_cannot_update_others_cart(self, user_a, user_b):
+        """越权防护：B 不能改 A 的购物车行"""
+        user_a.add_to_cart(1, 1)
+        cid = user_a.cart_items()[0]["id"]
+        status, body = user_b.put("/api/cart/items/%s" % cid, {"quantity": 99})
+        assert status == 404, "不应允许操作别人的购物车行"
+
+    def test_cannot_delete_others_cart(self, user_a, user_b):
+        """越权防护：B 不能删 A 的购物车行"""
+        user_a.add_to_cart(1, 1)
+        cid = user_a.cart_items()[0]["id"]
+        status, body = user_b.delete("/api/cart/items/%s" % cid)
+        assert status == 404
+        assert len(user_a.cart_items()) == 1, "A 的购物车不应被删掉"
