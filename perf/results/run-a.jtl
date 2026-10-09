@@ -1,0 +1,1201 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1791559549808,69,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,3,6,http://127.0.0.1:5001/api/products?page=1&size=10,63,0,44
+1791559549796,88,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,3,6,http://127.0.0.1:5001/api/products?page=1&size=10,75,0,53
+1791559549802,87,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,3,6,http://127.0.0.1:5001/api/products?page=1&size=10,70,0,52
+1791559549881,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,3,6,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,5
+1791559549889,31,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,4,7,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,8
+1791559549889,36,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,4,7,http://127.0.0.1:5001/api/products?page=1&size=10,36,0,5
+1791559549906,26,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,4,7,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,3
+1791559549911,30,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,2
+1791559549921,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,4
+1791559549926,23,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,23,0,3
+1791559549934,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,2
+1791559549942,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,3
+1791559549951,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,3
+1791559549942,35,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,34,0,4
+1791559549959,29,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,5
+1791559549962,30,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,30,0,6
+1791559549971,27,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,27,0,2
+1791559549978,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,4,8,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,5
+1791559549989,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,5,9,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,3
+1791559549994,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,5,9,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,2
+1791559550004,18,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,5,9,http://127.0.0.1:5001/api/products?page=1&size=10,17,0,3
+1791559549999,29,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,5,9,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,7
+1791559550009,26,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,5,9,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,3
+1791559550010,26,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,3
+1791559550019,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,2
+1791559550023,27,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,5
+1791559550029,23,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,23,0,2
+1791559550036,21,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,21,0,4
+1791559550037,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,4
+1791559550044,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,2
+1791559550050,17,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,17,0,2
+1791559550053,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,3
+1791559550058,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,2
+1791559550058,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,2
+1791559550065,17,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,17,0,1
+1791559550068,15,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,15,0,3
+1791559550073,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,2
+1791559550078,16,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,16,0,2
+1791559550083,16,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,16,0,1
+1791559550084,18,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,5,10,http://127.0.0.1:5001/api/products?page=1&size=10,18,0,1
+1791559550083,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,6,11,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,5
+1791559550094,17,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,6,11,http://127.0.0.1:5001/api/products?page=1&size=10,17,0,2
+1791559550094,22,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,6,11,http://127.0.0.1:5001/api/products?page=1&size=10,22,0,2
+1791559550100,29,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,6,11,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,1
+1791559550104,29,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,6,11,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,2
+1791559550108,75,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,6,12,http://127.0.0.1:5001/api/products?page=1&size=10,75,0,2
+1791559550109,89,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,6,12,http://127.0.0.1:5001/api/products?page=1&size=10,89,0,3
+1791559550112,87,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,6,12,http://127.0.0.1:5001/api/products?page=1&size=10,87,0,1
+1791559550117,86,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,6,12,http://127.0.0.1:5001/api/products?page=1&size=10,86,0,4
+1791559550130,77,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,7,13,http://127.0.0.1:5001/api/products?page=1&size=10,77,0,7
+1791559550134,79,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,7,13,http://127.0.0.1:5001/api/products?page=1&size=10,78,0,8
+1791559550184,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,7,13,http://127.0.0.1:5001/api/products?page=1&size=10,34,0,5
+1791559550199,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,7,13,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,2
+1791559550199,28,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,7,13,http://127.0.0.1:5001/api/products?page=1&size=10,28,0,3
+1791559550205,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,2
+1791559550208,30,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,30,0,3
+1791559550213,38,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,38,0,2
+1791559550209,43,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,43,0,3
+1791559550224,36,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,36,0,3
+1791559550219,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,4
+1791559550239,36,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,5
+1791559550228,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,1
+1791559550238,42,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,42,0,4
+1791559550252,28,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,28,0,2
+1791559550253,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,34,0,3
+1791559550261,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,2
+1791559550266,31,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,2
+1791559550275,26,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,3
+1791559550281,23,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,7,14,http://127.0.0.1:5001/api/products?page=1&size=10,23,0,3
+1791559550275,30,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,8,15,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,4
+1791559550281,37,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,8,15,http://127.0.0.1:5001/api/products?page=1&size=10,36,0,5
+1791559550288,35,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,8,15,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,1
+1791559550294,30,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,8,15,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,3
+1791559550298,26,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,8,15,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,3
+1791559550302,29,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,8,15,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,1
+1791559550304,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,34,0,3
+1791559550305,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,4
+1791559550318,30,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,30,0,2
+1791559550309,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,38,0,3
+1791559550323,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,34,0,5
+1791559550324,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,7
+1791559550332,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,2
+1791559550324,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,9
+1791559550346,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,4
+1791559550339,43,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,43,0,2
+1791559550348,41,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,3
+1791559550349,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,3
+1791559550357,41,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,41,0,7
+1791559550357,44,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,8,16,http://127.0.0.1:5001/api/products?page=1&size=10,44,0,10
+1791559550365,60,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,9,17,http://127.0.0.1:5001/api/products?page=1&size=10,60,0,3
+1791559550379,81,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,9,18,http://127.0.0.1:5001/api/products?page=1&size=10,81,0,2
+1791559550373,87,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,9,18,http://127.0.0.1:5001/api/products?page=1&size=10,86,0,5
+1791559550389,82,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,9,18,http://127.0.0.1:5001/api/products?page=1&size=10,81,0,5
+1791559550382,89,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,9,18,http://127.0.0.1:5001/api/products?page=1&size=10,89,0,2
+1791559550389,97,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,9,18,http://127.0.0.1:5001/api/products?page=1&size=10,97,0,7
+1791559550399,91,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,9,18,http://127.0.0.1:5001/api/products?page=1&size=10,91,0,3
+1791559550401,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,10,19,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,3
+1791559550415,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,10,19,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559550426,98,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,10,19,http://127.0.0.1:5001/api/products?page=1&size=10,98,0,3
+1791559550461,68,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,10,19,http://127.0.0.1:5001/api/products?page=1&size=10,68,0,5
+1791559550471,69,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,69,0,3
+1791559550462,78,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,78,0,5
+1791559550487,60,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,60,0,3
+1791559550471,82,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,81,0,6
+1791559550491,65,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,65,0,5
+1791559550504,56,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,56,0,3
+1791559550516,52,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,52,0,3
+1791559550523,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,9
+1791559550525,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,8
+1791559550529,51,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,51,0,6
+1791559550541,43,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,43,0,6
+1791559550542,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,7
+1791559550553,41,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,41,0,2
+1791559550548,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,10,20,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,2
+1791559550557,45,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,11,21,http://127.0.0.1:5001/api/products?page=1&size=10,45,0,6
+1791559550562,44,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,11,21,http://127.0.0.1:5001/api/products?page=1&size=10,44,0,3
+1791559550569,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,11,21,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,3
+1791559550571,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,11,21,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,2
+1791559550574,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,11,21,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,4
+1791559550581,42,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,11,21,http://127.0.0.1:5001/api/products?page=1&size=10,42,0,1
+1791559550584,53,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,53,0,2
+1791559550589,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,2
+1791559550596,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,3
+1791559550597,54,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,53,0,4
+1791559550604,53,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,53,0,2
+1791559550603,60,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,60,0,2
+1791559550607,57,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,57,0,6
+1791559550616,58,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,58,0,4
+1791559550623,56,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,56,0,9
+1791559550620,59,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,59,0,2
+1791559550622,59,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,59,0,9
+1791559550638,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,2
+1791559550638,51,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,51,0,2
+1791559550651,45,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,45,0,3
+1791559550643,54,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,11,22,http://127.0.0.1:5001/api/products?page=1&size=10,54,0,4
+1791559550663,42,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,12,23,http://127.0.0.1:5001/api/products?page=1&size=10,42,0,4
+1791559550658,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,12,23,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,5
+1791559550665,42,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,12,23,http://127.0.0.1:5001/api/products?page=1&size=10,42,0,3
+1791559550675,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,12,23,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,6
+1791559550680,38,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,12,23,http://127.0.0.1:5001/api/products?page=1&size=10,38,0,1
+1791559550680,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,12,23,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,3
+1791559550682,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,12,23,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,1
+1791559550688,37,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,12,23,http://127.0.0.1:5001/api/products?page=1&size=10,37,0,2
+1791559550689,41,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,12,23,http://127.0.0.1:5001/api/products?page=1&size=10,41,0,2
+1791559550697,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,1
+1791559550697,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,3
+1791559550702,38,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,38,0,2
+1791559550706,42,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,42,0,1
+1791559550707,44,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,43,0,5
+1791559550706,45,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,44,0,5
+1791559550715,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,2
+1791559550719,44,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,44,0,1
+1791559550721,42,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,42,0,1
+1791559550722,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,2
+1791559550726,45,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,45,0,2
+1791559550738,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,1
+1791559550731,58,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,58,0,1
+1791559550736,58,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,58,0,2
+1791559550740,58,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,12,24,http://127.0.0.1:5001/api/products?page=1&size=10,58,0,6
+1791559550749,58,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,13,25,http://127.0.0.1:5001/api/products?page=1&size=10,58,0,2
+1791559550751,61,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,13,25,http://127.0.0.1:5001/api/products?page=1&size=10,61,0,2
+1791559550751,66,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,13,25,http://127.0.0.1:5001/api/products?page=1&size=10,65,0,3
+1791559550755,68,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,13,25,http://127.0.0.1:5001/api/products?page=1&size=10,68,0,2
+1791559550763,66,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,13,25,http://127.0.0.1:5001/api/products?page=1&size=10,65,0,2
+1791559550764,68,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,13,25,http://127.0.0.1:5001/api/products?page=1&size=10,68,0,2
+1791559550769,85,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,13,26,http://127.0.0.1:5001/api/products?page=1&size=10,85,0,2
+1791559550795,59,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,13,26,http://127.0.0.1:5001/api/products?page=1&size=10,59,0,2
+1791559550788,66,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,13,26,http://127.0.0.1:5001/api/products?page=1&size=10,66,0,1
+1791559550772,84,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,13,26,http://127.0.0.1:5001/api/products?page=1&size=10,84,0,2
+1791559550798,63,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,13,26,http://127.0.0.1:5001/api/products?page=1&size=10,63,0,5
+1791559550790,77,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,13,26,http://127.0.0.1:5001/api/products?page=1&size=10,77,0,4
+1791559550800,112,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,14,27,http://127.0.0.1:5001/api/products?page=1&size=10,112,0,4
+1791559550813,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,14,27,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,2
+1791559550808,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,14,27,http://127.0.0.1:5001/api/products?page=1&size=10,110,0,6
+1791559550818,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,14,27,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,2
+1791559550824,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,5
+1791559550829,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,2
+1791559550855,87,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,87,0,12
+1791559550833,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,3
+1791559550855,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,20
+1791559550856,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,41
+1791559550855,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,27
+1791559550862,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,110,0,42
+1791559550868,113,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,113,0,37
+1791559550904,80,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,80,0,2
+1791559550913,72,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,72,0,1
+1791559550919,75,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,75,0,2
+1791559550919,80,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,14,28,http://127.0.0.1:5001/api/products?page=1&size=10,80,0,2
+1791559550928,79,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,15,29,http://127.0.0.1:5001/api/products?page=1&size=10,79,0,2
+1791559550933,75,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,15,29,http://127.0.0.1:5001/api/products?page=1&size=10,75,0,2
+1791559550939,73,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,15,29,http://127.0.0.1:5001/api/products?page=1&size=10,72,0,9
+1791559550943,73,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,15,29,http://127.0.0.1:5001/api/products?page=1&size=10,73,0,10
+1791559550964,57,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,15,29,http://127.0.0.1:5001/api/products?page=1&size=10,57,0,2
+1791559550949,77,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,15,29,http://127.0.0.1:5001/api/products?page=1&size=10,77,0,5
+1791559550968,71,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,70,0,7
+1791559550982,76,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,76,0,2
+1791559550973,87,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,87,0,5
+1791559550970,93,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,93,0,7
+1791559550985,84,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,84,0,4
+1791559550986,90,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,89,0,5
+1791559550995,81,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,81,0,6
+1791559551000,80,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,80,0,4
+1791559550999,85,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,85,0,4
+1791559551008,79,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,79,0,2
+1791559551008,80,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,80,0,2
+1791559551012,79,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,79,0,3
+1791559551016,82,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,16,31,http://127.0.0.1:5001/api/products?page=1&size=10,82,0,2
+1791559551022,76,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,16,31,http://127.0.0.1:5001/api/products?page=1&size=10,76,0,5
+1791559551026,77,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,16,31,http://127.0.0.1:5001/api/products?page=1&size=10,77,0,3
+1791559551039,65,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,16,31,http://127.0.0.1:5001/api/products?page=1&size=10,65,0,4
+1791559551059,90,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,16,32,http://127.0.0.1:5001/api/products?page=1&size=10,90,0,11
+1791559551060,90,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,16,32,http://127.0.0.1:5001/api/products?page=1&size=10,90,0,11
+1791559551044,90,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,258,16,32,http://127.0.0.1:5001/api/user/login,89,0,23
+1791559551043,101,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,258,16,32,http://127.0.0.1:5001/api/user/login,101,0,26
+1791559551056,92,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,258,16,32,http://127.0.0.1:5001/api/user/login,92,0,13
+1791559551048,73,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,258,15,31,http://127.0.0.1:5001/api/user/login,73,0,17
+1791559551048,82,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,258,16,32,http://127.0.0.1:5001/api/user/login,82,0,19
+1791559551056,59,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,258,15,31,http://127.0.0.1:5001/api/user/login,59,0,3
+1791559551044,80,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,258,15,31,http://127.0.0.1:5001/api/user/login,80,0,18
+1791559551045,74,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,258,15,31,http://127.0.0.1:5001/api/user/login,74,0,18
+1791559551046,78,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,258,15,31,http://127.0.0.1:5001/api/user/login,78,0,20
+1791559551045,73,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,258,15,31,http://127.0.0.1:5001/api/user/login,73,0,15
+1791559551043,98,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,258,16,32,http://127.0.0.1:5001/api/user/login,97,0,25
+1791559551043,95,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,258,16,32,http://127.0.0.1:5001/api/user/login,94,0,25
+1791559551045,83,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,258,15,31,http://127.0.0.1:5001/api/user/login,83,0,21
+1791559551046,66,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,258,15,31,http://127.0.0.1:5001/api/user/login,66,0,10
+1791559551043,65,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,258,15,31,http://127.0.0.1:5001/api/user/login,65,0,12
+1791559551063,102,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,16,32,http://127.0.0.1:5001/api/products?page=1&size=10,102,0,8
+1791559551070,97,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,16,32,http://127.0.0.1:5001/api/products?page=1&size=10,97,0,2
+1791559551076,98,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,16,32,http://127.0.0.1:5001/api/products?page=1&size=10,97,0,3
+1791559551077,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,16,32,http://127.0.0.1:5001/api/products?page=1&size=10,103,0,2
+1791559551080,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,16,32,http://127.0.0.1:5001/api/products?page=1&size=10,110,0,2
+1791559551087,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,16,32,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559551084,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,16,32,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,2
+1791559551088,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,17,33,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,2
+1791559551091,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,17,33,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,3
+1791559551098,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,17,33,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,3
+1791559551098,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,17,33,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,2
+1791559551100,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,17,33,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,1
+1791559551104,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,17,33,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,1
+1791559551105,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,17,33,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,1
+1791559551151,79,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,17,34,http://127.0.0.1:5001/api/products?page=1&size=10,79,0,1
+1791559551149,81,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,17,34,http://127.0.0.1:5001/api/products?page=1&size=10,81,0,2
+1791559551132,99,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,258,17,34,http://127.0.0.1:5001/api/user/login,99,0,2
+1791559551158,82,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,81,0,6
+1791559551158,85,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,85,0,7
+1791559551158,89,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,89,0,9
+1791559551158,91,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,91,0,12
+1791559551159,94,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,94,0,17
+1791559551159,96,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,96,0,18
+1791559551159,96,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,96,0,19
+1791559551160,99,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,99,0,19
+1791559551160,105,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,105,0,19
+1791559551160,112,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,111,0,20
+1791559551160,116,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,115,0,27
+1791559551161,120,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,120,0,24
+1791559551166,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,17,34,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,24
+1791559551160,127,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,127,0,27
+1791559551161,129,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,128,0,27
+1791559551163,133,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,17,34,http://127.0.0.1:5001/api/cart/items,132,0,26
+1791559551168,130,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,17,34,http://127.0.0.1:5001/api/products?page=1&size=10,130,0,24
+1791559551186,113,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,17,34,http://127.0.0.1:5001/api/products?page=1&size=10,113,0,9
+1791559551175,126,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,17,34,http://127.0.0.1:5001/api/products?page=1&size=10,126,0,18
+1791559551191,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,18,35,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,8
+1791559551195,119,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,18,35,http://127.0.0.1:5001/api/products?page=1&size=10,119,0,4
+1791559551205,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,18,35,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,2
+1791559551201,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,18,35,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,2
+1791559551205,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,18,35,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,3
+1791559551206,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,18,35,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,3
+1791559551213,119,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,18,36,http://127.0.0.1:5001/api/products?page=1&size=10,119,0,2
+1791559551213,122,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,18,36,http://127.0.0.1:5001/api/products?page=1&size=10,121,0,2
+1791559551216,122,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,18,36,http://127.0.0.1:5001/api/products?page=1&size=10,122,0,2
+1791559551218,127,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,18,36,http://127.0.0.1:5001/api/products?page=1&size=10,127,0,4
+1791559551229,120,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,258,18,36,http://127.0.0.1:5001/api/user/login,120,0,3
+1791559551222,128,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,18,36,http://127.0.0.1:5001/api/products?page=1&size=10,128,0,2
+1791559551230,125,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,18,36,http://127.0.0.1:5001/api/products?page=1&size=10,125,0,2
+1791559551230,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,18,36,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,3
+1791559551242,125,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,124,0,2
+1791559551233,136,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,18,36,http://127.0.0.1:5001/api/cart/items,135,0,1
+1791559551245,128,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,128,0,1
+1791559551248,130,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,130,0,3
+1791559551251,129,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,129,0,2
+1791559551254,129,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,129,0,2
+1791559551256,135,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,135,0,3
+1791559551257,140,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,140,0,3
+1791559551260,137,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,137,0,3
+1791559551273,128,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,128,0,5
+1791559551267,134,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,134,0,2
+1791559551278,125,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,124,0,2
+1791559551282,129,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,282,18,36,http://127.0.0.1:5001/api/user/login,128,0,2
+1791559551284,129,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,19,37,http://127.0.0.1:5001/api/products?page=1&size=10,128,0,2
+1791559551288,128,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,282,18,37,http://127.0.0.1:5001/api/user/login,128,0,2
+1791559551291,133,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,282,18,37,http://127.0.0.1:5001/api/user/login,133,0,3
+1791559551299,127,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,19,37,http://127.0.0.1:5001/api/products?page=1&size=10,126,0,2
+1791559551299,125,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,19,37,http://127.0.0.1:5001/api/products?page=1&size=10,124,0,1
+1791559551297,137,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,282,19,38,http://127.0.0.1:5001/api/user/login,137,0,2
+1791559551302,136,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,136,0,2
+1791559551307,137,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,136,0,5
+1791559551307,140,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,140,0,5
+1791559551315,136,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,136,0,4
+1791559551316,136,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,136,0,4
+1791559551318,140,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,140,0,3
+1791559551316,145,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,145,0,5
+1791559551324,141,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,141,0,3
+1791559551331,137,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,258,19,38,http://127.0.0.1:5001/api/user/login,137,0,2
+1791559551333,137,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,137,0,1
+1791559551335,135,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,135,0,2
+1791559551338,138,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,137,0,2
+1791559551346,134,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,134,0,3
+1791559551351,133,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,133,0,3
+1791559551350,137,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,19,38,http://127.0.0.1:5001/api/cart/items,136,0,2
+1791559551356,132,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,132,0,4
+1791559551361,128,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,19,38,http://127.0.0.1:5001/api/products?page=1&size=10,128,0,2
+1791559551370,129,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,282,19,38,http://127.0.0.1:5001/api/user/login,129,0,1
+1791559551375,128,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,19,38,http://127.0.0.1:5001/api/cart/items,128,0,3
+1791559551368,135,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,19,38,http://127.0.0.1:5001/api/cart/items,135,0,2
+1791559551380,127,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,19,38,http://127.0.0.1:5001/api/cart/items,127,0,3
+1791559551381,132,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,19,39,http://127.0.0.1:5001/api/cart/items,132,0,3
+1791559551384,130,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,19,39,http://127.0.0.1:5001/api/cart/items,130,0,2
+1791559551393,124,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,19,39,http://127.0.0.1:5001/api/cart/items,124,0,3
+1791559551399,119,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,19,39,http://127.0.0.1:5001/api/cart/items,119,0,5
+1791559551399,124,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,19,39,http://127.0.0.1:5001/api/cart/items,123,0,2
+1791559551402,127,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,126,0,3
+1791559551403,128,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,128,0,3
+1791559551404,132,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,132,0,3
+1791559551413,125,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,125,0,5
+1791559551415,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,4
+1791559551413,133,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,133,0,4
+1791559551426,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,8
+1791559551425,140,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,140,0,7
+1791559551427,138,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,138,0,8
+1791559551417,153,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,153,0,3
+1791559551430,142,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,258,20,40,http://127.0.0.1:5001/api/user/login,142,0,6
+1791559551436,144,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,144,0,1
+1791559551439,142,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,142,0,2
+1791559551445,139,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,139,0,2
+1791559551447,144,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,144,0,2
+1791559551451,144,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,144,0,2
+1791559551453,143,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,143,0,1
+1791559551459,137,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,137,0,2
+1791559551462,139,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,139,0,1
+1791559551466,138,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,138,0,1
+1791559551470,137,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,137,0,2
+1791559551470,142,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,142,0,2
+1791559551476,138,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,137,0,2
+1791559551470,144,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,144,0,1
+1791559551480,139,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,139,0,2
+1791559551485,138,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,138,0,1
+1791559551488,136,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,135,0,1
+1791559551490,141,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,141,0,1
+1791559551488,145,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,145,0,2
+1791559551501,137,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,137,0,1
+1791559551504,135,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,135,0,1
+1791559551504,141,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,141,0,2
+1791559551514,133,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,133,0,2
+1791559551508,140,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,140,0,3
+1791559551514,135,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,135,0,3
+1791559551514,141,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,141,0,3
+1791559551520,139,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,139,0,2
+1791559551520,143,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,143,0,3
+1791559551524,146,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,146,0,2
+1791559551530,141,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,141,0,1
+1791559551539,138,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,138,0,6
+1791559551533,145,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,145,0,2
+1791559551531,147,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,258,20,40,http://127.0.0.1:5001/api/user/login,147,0,3
+1791559551537,142,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,142,0,1
+1791559551546,139,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,138,0,5
+1791559551550,135,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,135,0,2
+1791559551558,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,4
+1791559551566,128,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,128,0,3
+1791559551567,132,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,132,0,3
+1791559551572,131,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,131,0,2
+1791559551582,121,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,121,0,2
+1791559551582,124,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,124,0,1
+1791559551585,123,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,123,0,1
+1791559551574,138,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,138,0,2
+1791559551591,122,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,122,0,3
+1791559551595,123,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,123,0,2
+1791559551597,125,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,124,0,1
+1791559551597,125,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,125,0,2
+1791559551602,123,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,122,0,1
+1791559551604,128,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,128,0,2
+1791559551608,126,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,126,0,2
+1791559551614,122,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,122,0,3
+1791559551613,124,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,124,0,3
+1791559551619,128,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,128,0,2
+1791559551615,133,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,133,0,2
+1791559551623,130,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,130,0,4
+1791559551632,121,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,121,0,1
+1791559551624,130,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,130,0,4
+1791559551635,128,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,128,0,1
+1791559551639,127,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,127,0,5
+1791559551640,132,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,132,0,5
+1791559551656,121,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,121,0,1
+1791559551646,132,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,132,0,3
+1791559551649,131,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,131,0,2
+1791559551650,134,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,134,0,2
+1791559551661,125,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,125,0,3
+1791559551649,139,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,139,0,3
+1791559551671,124,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,124,0,2
+1791559551678,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,3
+1791559551664,136,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,136,0,3
+1791559551672,134,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,134,0,2
+1791559551679,127,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,127,0,3
+1791559551680,133,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,133,0,3
+1791559551685,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,2
+1791559551680,136,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,136,0,3
+1791559551689,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,2
+1791559551686,140,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,140,0,2
+1791559551695,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,1
+1791559551703,128,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,128,0,2
+1791559551701,134,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,134,0,1
+1791559551709,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,3
+1791559551714,127,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,127,0,1
+1791559551707,135,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,135,0,3
+1791559551714,134,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,134,0,2
+1791559551718,133,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,133,0,2
+1791559551704,148,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,148,0,2
+1791559551722,134,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,133,0,2
+1791559551722,137,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,137,0,4
+1791559551725,138,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,138,0,3
+1791559551733,135,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,135,0,1
+1791559551734,134,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,134,0,2
+1791559551736,136,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,136,0,2
+1791559551737,137,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,136,0,2
+1791559551748,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,2
+1791559551753,133,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,132,0,2
+1791559551754,134,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,134,0,2
+1791559551749,142,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,141,0,1
+1791559551755,137,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,137,0,2
+1791559551764,134,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,133,0,2
+1791559551768,136,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,136,0,2
+1791559551778,127,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,127,0,3
+1791559551773,132,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,132,0,2
+1791559551779,134,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,134,0,3
+1791559551781,134,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,134,0,2
+1791559551785,133,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,133,0,2
+1791559551787,135,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,135,0,2
+1791559551796,132,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,2
+1791559551789,141,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,141,0,1
+1791559551797,136,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,136,0,1
+1791559551807,131,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,130,0,4
+1791559551801,142,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,141,0,1
+1791559551807,137,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,136,0,4
+1791559551814,134,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,133,0,2
+1791559551817,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,1
+1791559551817,139,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,139,0,2
+1791559551821,139,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,139,0,1
+1791559551827,137,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,137,0,2
+1791559551832,136,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,136,0,1
+1791559551828,140,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,140,0,2
+1791559551841,136,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,136,0,7
+1791559551841,139,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,139,0,8
+1791559551836,144,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,144,0,2
+1791559551844,142,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,142,0,6
+1791559551852,134,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,134,0,2
+1791559551856,138,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,138,0,2
+1791559551856,139,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,139,0,7
+1791559551856,144,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,144,0,6
+1791559551861,139,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,139,0,2
+1791559551864,140,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,140,0,2
+1791559551868,141,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,141,0,2
+1791559551868,142,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,142,0,2
+1791559551872,141,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,141,0,3
+1791559551874,142,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,142,0,5
+1791559551880,139,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,139,0,1
+1791559551886,135,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,135,0,1
+1791559551889,133,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,133,0,1
+1791559551892,134,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,134,0,3
+1791559551892,138,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,138,0,4
+1791559551905,129,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,129,0,5
+1791559551905,130,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,130,0,2
+1791559551899,140,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,140,0,2
+1791559551906,139,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,139,0,5
+1791559551928,118,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,118,0,3
+1791559551916,132,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,131,0,2
+1791559551915,134,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,134,0,2
+1791559551919,133,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,133,0,2
+1791559551931,126,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,126,0,1
+1791559551926,133,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,132,0,3
+1791559551948,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,7
+1791559551934,133,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,133,0,2
+1791559551939,130,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,130,0,2
+1791559551944,126,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,126,0,2
+1791559551944,127,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,127,0,3
+1791559551949,130,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,129,0,9
+1791559551964,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,2
+1791559551960,120,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,120,0,2
+1791559551969,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,3
+1791559551957,128,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,128,0,2
+1791559551978,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,2
+1791559551981,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,2
+1791559551970,124,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,124,0,3
+1791559551987,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,2
+1791559551982,120,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,120,0,1
+1791559551995,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,3
+1791559552000,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559551987,123,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,123,0,2
+1791559552005,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,1
+1791559552001,112,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,112,0,2
+1791559552011,103,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,103,0,1
+1791559552011,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,2
+1791559551996,124,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,124,0,2
+1791559552014,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,1
+1791559552019,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,1
+1791559552017,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,1
+1791559552021,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,1
+1791559552023,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,1
+1791559552027,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,1
+1791559552034,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,1
+1791559552031,112,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,111,0,2
+1791559552046,102,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,101,0,2
+1791559552036,112,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,112,0,1
+1791559552041,108,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,107,0,1
+1791559552046,107,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,107,0,3
+1791559552049,105,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,105,0,1
+1791559552050,111,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,110,0,1
+1791559552053,108,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,108,0,1
+1791559552066,101,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,101,0,1
+1791559552059,108,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,108,0,3
+1791559552060,110,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,110,0,2
+1791559552070,103,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,103,0,2
+1791559552068,105,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,105,0,2
+1791559552071,103,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,103,0,2
+1791559552079,101,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,100,0,3
+1791559552072,109,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,109,0,2
+1791559552080,106,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,106,0,2
+1791559552080,106,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,106,0,2
+1791559552085,102,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,102,0,2
+1791559552086,106,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,106,0,2
+1791559552090,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,1
+1791559552092,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,4
+1791559552098,104,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,2
+1791559552095,108,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,107,0,2
+1791559552104,100,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,100,0,1
+1791559552103,105,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,105,0,1
+1791559552107,102,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,102,0,2
+1791559552112,102,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,102,0,3
+1791559552112,103,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,103,0,2
+1791559552114,104,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,2
+1791559552114,108,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,108,0,2
+1791559552119,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,1
+1791559552120,107,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,107,0,2
+1791559552124,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,2
+1791559552127,104,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,2
+1791559552127,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,2
+1791559552132,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,2
+1791559552134,103,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,103,0,2
+1791559552135,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,2
+1791559552139,106,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,106,0,2
+1791559552148,101,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,101,0,2
+1791559552145,104,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,104,0,1
+1791559552149,105,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,105,0,2
+1791559552167,94,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,94,0,1
+1791559552149,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,113,0,2
+1791559552155,108,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,108,0,2
+1791559552154,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,113,0,1
+1791559552162,108,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,108,0,1
+1791559552162,110,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,110,0,2
+1791559552168,108,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,108,0,1
+1791559552174,107,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,107,0,2
+1791559552180,103,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,103,0,2
+1791559552174,110,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,110,0,3
+1791559552171,116,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,116,0,1
+1791559552175,112,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,112,0,2
+1791559552186,106,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,106,0,3
+1791559552182,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,112,0,2
+1791559552187,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,3
+1791559552187,115,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,115,0,3
+1791559552195,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,2
+1791559552198,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,1
+1791559552203,104,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,1
+1791559552194,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,114,0,2
+1791559552204,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,1
+1791559552210,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559552203,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,114,0,2
+1791559552215,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,1
+1791559552210,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,114,0,2
+1791559552219,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,1
+1791559552216,116,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,116,0,2
+1791559552224,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,2
+1791559552223,111,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,111,0,2
+1791559552229,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,110,0,2
+1791559552231,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,2
+1791559552236,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,1
+1791559552228,118,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,118,0,2
+1791559552237,112,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,112,0,3
+1791559552237,113,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,113,0,3
+1791559552244,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,1
+1791559552245,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,1
+1791559552249,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559552250,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,113,0,2
+1791559552261,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,2
+1791559552255,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,114,0,1
+1791559552263,109,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,109,0,3
+1791559552268,111,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,111,0,3
+1791559552264,117,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,117,0,3
+1791559552283,99,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,99,0,1
+1791559552278,106,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,106,0,1
+1791559552271,114,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,113,0,1
+1791559552273,113,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,113,0,2
+1791559552282,104,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,104,0,1
+1791559552285,110,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,110,0,2
+1791559552288,111,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,111,0,1
+1791559552292,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,3
+1791559552288,116,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,116,0,1
+1791559552299,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,1
+1791559552296,113,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,113,0,1
+1791559552303,113,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,113,0,1
+1791559552303,118,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,118,0,2
+1791559552308,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,3
+1791559552303,119,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,119,0,2
+1791559552309,121,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,121,0,2
+1791559552315,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,1
+1791559552317,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,1
+1791559552322,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,2
+1791559552318,120,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,120,0,1
+1791559552328,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,2
+1791559552325,119,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,119,0,2
+1791559552333,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,1
+1791559552333,118,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,118,0,2
+1791559552340,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,1
+1791559552340,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,2
+1791559552335,126,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,126,0,2
+1791559552345,118,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,118,0,1
+1791559552349,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,1
+1791559552347,120,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,120,0,1
+1791559552351,119,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,119,0,1
+1791559552356,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,2
+1791559552355,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,1
+1791559552357,120,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,120,0,2
+1791559552366,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,2
+1791559552365,117,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,117,0,1
+1791559552370,115,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,282,20,40,http://127.0.0.1:5001/api/user/login,115,0,2
+1791559552375,115,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,115,0,1
+1791559552382,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,2
+1791559552380,117,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,117,0,2
+1791559552382,116,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,116,0,2
+1791559552385,116,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,116,0,1
+1791559552385,119,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,119,0,4
+1791559552387,122,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,122,0,6
+1791559552397,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,114,0,2
+1791559552400,113,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,113,0,3
+1791559552387,130,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,130,0,8
+1791559552409,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,3
+1791559552405,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,114,0,1
+1791559552400,122,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,122,0,2
+1791559552417,106,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,106,0,2
+1791559552411,118,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,118,0,2
+1791559552422,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559552422,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,110,0,5
+1791559552432,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,2
+1791559552433,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559552423,117,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,117,0,4
+1791559552437,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,2
+1791559552432,116,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,20,40,http://127.0.0.1:5001/api/cart/items,116,0,1
+1791559552443,106,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,106,0,3
+1791559552447,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-3,text,true,,2167,144,20,40,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,2
+1791559552439,115,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,20,39,http://127.0.0.1:5001/api/cart/items,115,0,1
+1791559552446,110,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,20,39,http://127.0.0.1:5001/api/cart/items,110,0,1
+1791559552455,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,1
+1791559552457,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,3
+1791559552452,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,20,39,http://127.0.0.1:5001/api/cart/items,113,0,2
+1791559552462,108,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,108,0,2
+1791559552463,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,1
+1791559552467,106,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,106,0,1
+1791559552470,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,1
+1791559552472,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,2
+1791559552468,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,20,39,http://127.0.0.1:5001/api/cart/items,113,0,1
+1791559552473,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,1
+1791559552477,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,110,0,1
+1791559552481,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,108,0,2
+1791559552483,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,20,39,http://127.0.0.1:5001/api/cart/items,113,0,1
+1791559552491,106,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,106,0,3
+1791559552491,111,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,110,0,3
+1791559552486,116,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,20,39,http://127.0.0.1:5001/api/cart/items,116,0,2
+1791559552498,106,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,106,0,2
+1791559552502,109,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,109,0,1
+1791559552499,115,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,115,0,1
+1791559552505,110,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,110,0,1
+1791559552510,111,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,111,0,3
+1791559552514,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559552512,115,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,115,0,2
+1791559552519,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,1
+1791559552518,118,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,118,0,2
+1791559552520,119,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,119,0,1
+1791559552523,122,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,122,0,2
+1791559552523,127,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,127,0,3
+1791559552529,127,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,127,0,2
+1791559552533,129,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,129,0,1
+1791559552530,134,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,134,0,1
+1791559552537,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,1
+1791559552540,129,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,129,0,2
+1791559552546,127,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,127,0,2
+1791559552549,130,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,130,0,2
+1791559552542,138,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,138,0,2
+1791559552549,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,2
+1791559552555,131,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,130,0,1
+1791559552564,125,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,125,0,2
+1791559552557,132,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,132,0,3
+1791559552565,129,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,129,0,2
+1791559552566,130,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,130,0,1
+1791559552570,130,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,130,0,2
+1791559552574,130,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,130,0,2
+1791559552571,138,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,20,39,http://127.0.0.1:5001/api/cart/items,138,0,1
+1791559552578,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,1
+1791559552581,129,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,129,0,1
+1791559552582,131,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,282,20,39,http://127.0.0.1:5001/api/user/login,131,0,1
+1791559552584,131,GET /api/products,200,OK,① 只读 · 商品列表查询 1-1,text,true,,2167,144,19,39,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,1
+1791559552587,132,GET /api/products,200,OK,① 只读 · 商品列表查询 1-2,text,true,,2167,144,18,38,http://127.0.0.1:5001/api/products?page=1&size=10,131,0,1
+1791559552597,124,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,124,0,2
+1791559552589,138,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,138,0,2
+1791559552598,131,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,282,20,37,http://127.0.0.1:5001/api/user/login,131,0,1
+1791559552603,131,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,282,20,37,http://127.0.0.1:5001/api/user/login,131,0,2
+1791559552603,134,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,134,0,2
+1791559552622,123,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,123,0,8
+1791559552615,130,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,130,0,5
+1791559552617,132,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,132,0,4
+1791559552605,144,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,144,0,2
+1791559552622,129,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,129,0,5
+1791559552636,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,2
+1791559552615,140,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,140,0,6
+1791559552637,121,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,121,0,2
+1791559552628,134,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,134,0,3
+1791559552645,119,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,119,0,7
+1791559552650,118,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,118,0,4
+1791559552657,112,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,112,0,3
+1791559552662,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,2
+1791559552647,125,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,125,0,5
+1791559552668,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,2
+1791559552665,117,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,117,0,2
+1791559552669,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,2
+1791559552673,112,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,112,0,3
+1791559552680,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,3
+1791559552680,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,114,0,2
+1791559552681,117,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,117,0,2
+1791559552689,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,110,0,4
+1791559552695,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,1
+1791559552687,118,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,20,37,http://127.0.0.1:5001/api/cart/items,118,0,1
+1791559552704,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,1
+1791559552701,111,GET /api/products,200,OK,① 只读 · 商品列表查询 1-4,text,true,,2167,144,17,37,http://127.0.0.1:5001/api/products?page=1&size=10,111,0,1
+1791559552691,122,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,122,0,3
+1791559552697,117,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,117,0,2
+1791559552710,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,1
+1791559552710,112,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,112,0,2
+1791559552711,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,1
+1791559552721,109,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,109,0,2
+1791559552727,104,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,2
+1791559552715,118,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,118,0,2
+1791559552730,111,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,111,0,1
+1791559552745,97,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,97,0,2
+1791559552738,104,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,104,0,2
+1791559552746,103,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,103,0,2
+1791559552735,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,114,0,1
+1791559552750,100,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,100,0,1
+1791559552750,105,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,105,0,3
+1791559552751,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,2
+1791559552752,108,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,108,0,2
+1791559552756,107,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,106,0,4
+1791559552759,105,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,105,0,2
+1791559552763,105,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,104,0,1
+1791559552768,102,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,102,0,1
+1791559552770,102,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,102,0,1
+1791559552772,104,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,2
+1791559552765,112,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,112,0,2
+1791559552779,102,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,102,0,2
+1791559552773,108,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,108,0,4
+1791559552783,104,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,104,0,1
+1791559552783,104,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,103,0,2
+1791559552786,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,1
+1791559552790,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559552795,103,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,103,0,1
+1791559552800,100,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,100,0,1
+1791559552799,104,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,104,0,1
+1791559552804,100,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,100,0,1
+1791559552812,97,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,97,0,2
+1791559552806,104,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,103,0,4
+1791559552814,98,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,98,0,2
+1791559552817,98,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,98,0,1
+1791559552816,100,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,99,0,1
+1791559552825,98,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,97,0,2
+1791559552831,92,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,92,0,1
+1791559552831,101,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,101,0,2
+1791559552823,110,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,110,0,3
+1791559552834,100,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,100,0,1
+1791559552843,93,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,93,0,3
+1791559552843,97,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,97,0,2
+1791559552850,99,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,99,0,2
+1791559552843,106,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,106,0,3
+1791559552857,101,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,101,0,3
+1791559552850,111,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,111,0,3
+1791559552851,117,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,117,0,2
+1791559552856,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,113,0,3
+1791559552863,108,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,108,0,2
+1791559552861,111,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,111,0,2
+1791559552870,110,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,110,0,1
+1791559552865,116,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,116,0,1
+1791559552868,119,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,119,0,1
+1791559552873,114,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,2
+1791559552876,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,2
+1791559552881,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,2
+1791559552878,124,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,124,0,2
+1791559552887,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,2
+1791559552882,125,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,125,0,2
+1791559552892,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,2
+1791559552897,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,2
+1791559552888,125,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,125,0,1
+1791559552901,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,1
+1791559552904,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,1
+1791559552899,124,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,124,0,2
+1791559552910,119,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,119,0,2
+1791559552904,127,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,127,0,2
+1791559552916,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,1
+1791559552911,124,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,124,0,2
+1791559552923,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,114,0,3
+1791559552913,128,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,128,0,1
+1791559552923,121,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,121,0,3
+1791559552916,130,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,129,0,2
+1791559552932,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,2
+1791559552937,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,1
+1791559552934,122,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,122,0,2
+1791559552950,114,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,114,0,1
+1791559552934,130,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,130,0,2
+1791559552944,121,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,121,0,2
+1791559552959,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,3
+1791559552950,121,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,121,0,2
+1791559552962,115,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,114,0,2
+1791559552969,110,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,110,0,2
+1791559552970,115,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,115,0,5
+1791559552980,107,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559552976,113,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,113,0,4
+1791559552983,111,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,111,0,2
+1791559552972,125,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,125,0,6
+1791559552987,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,2
+1791559552988,119,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,119,0,2
+1791559552991,119,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,119,0,2
+1791559552997,122,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,122,0,2
+1791559553002,121,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,121,0,3
+1791559553002,127,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,127,0,2
+1791559553008,123,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,123,0,3
+1791559553008,127,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,127,0,3
+1791559553013,125,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,125,0,1
+1791559553018,132,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,132,0,1
+1791559553014,138,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,138,0,1
+1791559553020,133,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,133,0,1
+1791559553030,132,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,132,0,2
+1791559553024,138,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,138,0,2
+1791559553032,135,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,135,0,1
+1791559553032,137,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,136,0,2
+1791559553036,142,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,142,0,2
+1791559553038,143,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,143,0,1
+1791559553045,141,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,141,0,1
+1791559553043,146,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,146,0,1
+1791559553046,148,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,148,0,2
+1791559553050,145,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,145,0,1
+1791559553054,149,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,149,0,1
+1791559553058,151,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,151,0,2
+1791559553065,146,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,146,0,4
+1791559553065,150,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,150,0,5
+1791559553066,150,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,150,0,4
+1791559553065,155,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,155,0,3
+1791559553072,156,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,282,20,36,http://127.0.0.1:5001/api/user/login,156,0,4
+1791559553078,155,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,155,0,1
+1791559553080,157,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,157,0,1
+1791559553088,155,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,155,0,2
+1791559553086,161,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,160,0,1
+1791559553090,164,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,164,0,5
+1791559553102,160,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,160,0,2
+1791559553098,165,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,165,0,4
+1791559553095,168,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,168,0,6
+1791559553111,158,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,158,0,2
+1791559553109,161,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,161,0,3
+1791559553119,160,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,160,0,2
+1791559553124,162,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,162,0,3
+1791559553132,159,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,159,0,2
+1791559553130,166,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,166,0,2
+1791559553139,162,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,162,0,5
+1791559553150,155,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,155,0,2
+1791559553136,176,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,176,0,2
+1791559553153,169,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,20,36,http://127.0.0.1:5001/api/cart/items,168,0,2
+1791559553153,173,GET /api/products,200,OK,① 只读 · 商品列表查询 1-5,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,173,0,7
+1791559553162,164,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,16,36,http://127.0.0.1:5001/api/products?page=1&size=10,164,0,3
+1791559553169,169,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,169,0,2
+1791559553163,177,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,177,0,3
+1791559553181,164,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,164,0,4
+1791559553168,178,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,178,0,2
+1791559553179,171,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,171,0,4
+1791559553186,169,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,169,0,2
+1791559553196,163,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,163,0,2
+1791559553190,172,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,171,0,4
+1791559553204,158,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,158,0,1
+1791559553195,173,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,173,0,2
+1791559553216,157,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,157,0,3
+1791559553210,164,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,164,0,4
+1791559553212,166,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,166,0,4
+1791559553217,166,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,166,0,3
+1791559553221,172,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,172,0,2
+1791559553243,153,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,153,0,2
+1791559553234,164,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,164,0,2
+1791559553239,159,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,159,0,4
+1791559553247,152,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,152,0,2
+1791559553230,174,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,174,0,2
+1791559553262,145,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,145,0,6
+1791559553255,152,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,152,0,5
+1791559553269,149,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,149,0,8
+1791559553264,159,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,159,0,7
+1791559553270,154,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,153,0,8
+1791559553279,151,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,150,0,2
+1791559553287,145,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,145,0,6
+1791559553291,141,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,141,0,3
+1791559553264,171,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,171,0,8
+1791559553297,142,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,142,0,2
+1791559553301,142,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,142,0,7
+1791559553306,143,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,143,0,6
+1791559553326,127,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,127,0,5
+1791559553313,141,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,140,0,6
+1791559553338,117,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,117,0,4
+1791559553323,137,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,137,0,2
+1791559553341,122,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,122,0,2
+1791559553346,120,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,120,0,3
+1791559553347,121,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,121,0,3
+1791559553356,116,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,116,0,2
+1791559553351,124,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,124,0,2
+1791559553360,121,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,121,0,3
+1791559553362,120,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,119,0,3
+1791559553363,124,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,124,0,2
+1791559553373,115,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,115,0,5
+1791559553369,120,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,120,0,2
+1791559553375,121,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,121,0,4
+1791559553380,118,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,117,0,1
+1791559553384,115,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,282,20,35,http://127.0.0.1:5001/api/user/login,115,0,2
+1791559553396,104,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,15,35,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,2
+1791559553395,111,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,111,0,1
+1791559553399,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-13,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,113,0,2
+1791559553399,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-12,text,true,,218,268,20,35,http://127.0.0.1:5001/api/cart/items,113,0,3
+1791559553405,110,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,232,282,18,33,http://127.0.0.1:5001/api/user/login,110,0,6
+1791559553407,113,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,15,33,http://127.0.0.1:5001/api/products?page=1&size=10,113,0,5
+1791559553400,124,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-8,text,true,,218,268,18,33,http://127.0.0.1:5001/api/cart/items,124,0,2
+1791559553418,108,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,15,32,http://127.0.0.1:5001/api/products?page=1&size=10,107,0,2
+1791559553408,119,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-2,text,true,,218,268,17,32,http://127.0.0.1:5001/api/cart/items,119,0,5
+1791559553424,109,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-1,text,true,,218,268,16,31,http://127.0.0.1:5001/api/cart/items,109,0,5
+1791559553430,103,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,15,30,http://127.0.0.1:5001/api/products?page=1&size=10,103,0,2
+1791559553425,111,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-10,text,true,,218,268,15,30,http://127.0.0.1:5001/api/cart/items,111,0,4
+1791559553432,106,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,15,29,http://127.0.0.1:5001/api/products?page=1&size=10,106,0,2
+1791559553432,112,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,15,29,http://127.0.0.1:5001/api/products?page=1&size=10,112,0,3
+1791559553443,105,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,15,29,http://127.0.0.1:5001/api/products?page=1&size=10,105,0,2
+1791559553436,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-3,text,true,,218,268,14,29,http://127.0.0.1:5001/api/cart/items,114,0,2
+1791559553449,101,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,15,28,http://127.0.0.1:5001/api/products?page=1&size=10,101,0,2
+1791559553442,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-15,text,true,,218,268,13,28,http://127.0.0.1:5001/api/cart/items,113,0,2
+1791559553453,104,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,15,27,http://127.0.0.1:5001/api/products?page=1&size=10,104,0,3
+1791559553455,106,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,15,27,http://127.0.0.1:5001/api/products?page=1&size=10,106,0,3
+1791559553455,109,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-7,text,true,,218,268,12,27,http://127.0.0.1:5001/api/cart/items,109,0,2
+1791559553466,103,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,15,26,http://127.0.0.1:5001/api/products?page=1&size=10,103,0,1
+1791559553462,108,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-14,text,true,,218,268,11,26,http://127.0.0.1:5001/api/cart/items,108,0,2
+1791559553473,99,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,15,25,http://127.0.0.1:5001/api/products?page=1&size=10,99,0,2
+1791559553464,114,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-11,text,true,,218,268,10,25,http://127.0.0.1:5001/api/cart/items,113,0,1
+1791559553470,109,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,9,24,http://127.0.0.1:5001/api/cart/items,109,0,1
+1791559553481,99,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,15,24,http://127.0.0.1:5001/api/products?page=1&size=10,99,0,2
+1791559553482,99,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,15,24,http://127.0.0.1:5001/api/products?page=1&size=10,99,0,1
+1791559553488,98,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,15,24,http://127.0.0.1:5001/api/products?page=1&size=10,98,0,3
+1791559553477,109,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-6,text,true,,218,268,9,24,http://127.0.0.1:5001/api/cart/items,109,0,1
+1791559553488,105,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-9,text,true,,218,268,8,23,http://127.0.0.1:5001/api/cart/items,105,0,5
+1791559553497,100,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,282,7,22,http://127.0.0.1:5001/api/user/login,100,0,1
+1791559553500,97,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,15,22,http://127.0.0.1:5001/api/products?page=1&size=10,97,0,3
+1791559553490,108,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-5,text,true,,218,268,7,22,http://127.0.0.1:5001/api/cart/items,108,0,3
+1791559553498,104,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-4,text,true,,218,268,6,21,http://127.0.0.1:5001/api/cart/items,104,0,2
+1791559553507,97,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,232,282,5,20,http://127.0.0.1:5001/api/user/login,97,0,1
+1791559553520,84,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,15,20,http://127.0.0.1:5001/api/products?page=1&size=10,84,0,1
+1791559553526,85,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,15,20,http://127.0.0.1:5001/api/products?page=1&size=10,85,0,2
+1791559553534,78,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,15,20,http://127.0.0.1:5001/api/products?page=1&size=10,78,0,1
+1791559553500,113,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,5,20,http://127.0.0.1:5001/api/cart/items,113,0,3
+1791559553538,75,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,15,20,http://127.0.0.1:5001/api/products?page=1&size=10,75,0,2
+1791559553517,98,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-16,text,true,,218,268,5,20,http://127.0.0.1:5001/api/cart/items,98,0,1
+1791559553544,75,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,75,0,2
+1791559553548,73,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,73,0,1
+1791559553557,70,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,70,0,3
+1791559553551,77,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,77,0,1
+1791559553562,69,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,69,0,1
+1791559553570,64,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,64,0,1
+1791559553572,63,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,63,0,1
+1791559553580,59,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,58,0,2
+1791559553580,60,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,282,4,19,http://127.0.0.1:5001/api/user/login,60,0,2
+1791559553582,61,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,61,0,1
+1791559553586,61,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,61,0,2
+1791559553598,53,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,53,0,2
+1791559553605,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,1
+1791559553597,56,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,4,19,http://127.0.0.1:5001/api/cart/items,56,0,2
+1791559553611,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,2
+1791559553614,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,1
+1791559553613,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,15,19,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,1
+1791559553605,59,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-17,text,true,,218,268,4,19,http://127.0.0.1:5001/api/cart/items,59,0,2
+1791559553614,54,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,232,282,3,18,http://127.0.0.1:5001/api/user/login,54,0,2
+1791559553620,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553622,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,1
+1791559553628,45,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,45,0,1
+1791559553628,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,1
+1791559553632,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,1
+1791559553634,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,1
+1791559553635,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,1
+1791559553639,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553643,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,2
+1791559553647,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,1
+1791559553651,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,1
+1791559553642,55,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,3,18,http://127.0.0.1:5001/api/cart/items,55,0,2
+1791559553653,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553658,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,2
+1791559553654,53,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,232,282,3,18,http://127.0.0.1:5001/api/user/login,52,0,1
+1791559553661,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553662,50,GET /api/products,200,OK,① 只读 · 商品列表查询 1-6,text,true,,2167,144,15,18,http://127.0.0.1:5001/api/products?page=1&size=10,50,0,1
+1791559553668,44,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,14,17,http://127.0.0.1:5001/api/products?page=1&size=10,44,0,2
+1791559553669,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,14,17,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,2
+1791559553674,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,14,17,http://127.0.0.1:5001/api/products?page=1&size=10,45,0,2
+1791559553669,52,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-18,text,true,,218,268,3,17,http://127.0.0.1:5001/api/cart/items,52,0,1
+1791559553679,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553678,50,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,50,0,1
+1791559553682,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,1
+1791559553684,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553688,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,1
+1791559553690,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,3
+1791559553693,46,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,46,0,2
+1791559553697,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553701,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,1
+1791559553698,53,POST /api/user/login,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,232,282,2,16,http://127.0.0.1:5001/api/user/login,53,0,1
+1791559553705,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553709,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,2
+1791559553713,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,14,16,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,1
+1791559553707,57,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-19,text,true,,218,268,2,16,http://127.0.0.1:5001/api/cart/items,57,0,3
+1791559553718,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553720,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553727,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,1
+1791559553728,47,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,47,0,1
+1791559553728,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,2
+1791559553733,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,1
+1791559553734,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,2
+1791559553739,48,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,48,0,1
+1791559553740,49,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,49,0,2
+1791559553746,45,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,44,0,1
+1791559553750,42,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,42,0,2
+1791559553753,45,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,45,0,1
+1791559553759,44,GET /api/products,200,OK,① 只读 · 商品列表查询 1-7,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,44,0,2
+1791559553762,41,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,14,15,http://127.0.0.1:5001/api/products?page=1&size=10,41,0,1
+1791559553752,53,POST /api/cart/items（加购）,200,OK,② 读写混合 · 登录 + 加购 2-20,text,true,,218,268,1,14,http://127.0.0.1:5001/api/cart/items,53,0,1
+1791559553766,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,13,14,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,2
+1791559553768,41,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,41,0,2
+1791559553774,38,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,38,0,1
+1791559553775,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,1
+1791559553777,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,2
+1791559553783,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,1
+1791559553784,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,1
+1791559553788,36,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,36,0,1
+1791559553789,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,1
+1791559553791,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,1
+1791559553792,42,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,42,0,2
+1791559553798,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,3
+1791559553803,36,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,36,0,1
+1791559553805,36,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,1
+1791559553810,35,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,1
+1791559553812,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,34,0,1
+1791559553816,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,2
+1791559553818,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,1
+1791559553822,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,2
+1791559553824,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,1
+1791559553829,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,2
+1791559553825,38,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,38,0,1
+1791559553831,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,34,0,1
+1791559553835,31,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,1
+1791559553837,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,1
+1791559553839,35,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,1
+1791559553841,37,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,37,0,1
+1791559553845,35,GET /api/products,200,OK,① 只读 · 商品列表查询 1-8,text,true,,2167,144,13,13,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,1
+1791559553847,35,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,1
+1791559553849,37,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,37,0,1
+1791559553856,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,1
+1791559553852,41,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,2
+1791559553857,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,1
+1791559553862,37,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,37,0,1
+1791559553863,38,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,38,0,1
+1791559553865,39,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,39,0,1
+1791559553867,41,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,41,0,1
+1791559553869,40,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,40,0,2
+1791559553874,36,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,36,0,2
+1791559553878,38,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,38,0,2
+1791559553882,35,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,2
+1791559553886,35,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,3
+1791559553890,31,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,3
+1791559553893,35,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,35,0,1
+1791559553896,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,2
+1791559553899,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,2
+1791559553901,31,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,1
+1791559553904,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,2
+1791559553908,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,2
+1791559553909,31,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,1
+1791559553910,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,34,0,2
+1791559553918,30,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,1
+1791559553916,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,2
+1791559553921,28,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,28,0,1
+1791559553921,37,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,37,0,2
+1791559553930,28,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,28,0,1
+1791559553930,28,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,28,0,2
+1791559553932,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,1
+1791559553932,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,2
+1791559553938,29,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,1
+1791559553940,31,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,1
+1791559553940,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,2
+1791559553945,31,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,1
+1791559553948,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,31,0,2
+1791559553949,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,2
+1791559553949,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-9,text,true,,2167,144,12,12,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,3
+1791559553958,27,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,11,11,http://127.0.0.1:5001/api/products?page=1&size=10,27,0,2
+1791559553958,33,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,11,11,http://127.0.0.1:5001/api/products?page=1&size=10,33,0,2
+1791559553958,34,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,11,11,http://127.0.0.1:5001/api/products?page=1&size=10,34,0,3
+1791559553964,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,11,11,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,1
+1791559553964,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,11,11,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,2
+1791559553967,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,11,11,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,2
+1791559553972,29,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,11,11,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,1
+1791559553974,29,GET /api/products,200,OK,① 只读 · 商品列表查询 1-10,text,true,,2167,144,11,11,http://127.0.0.1:5001/api/products?page=1&size=10,29,0,1
+1791559553977,30,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,30,0,1
+1791559553980,28,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,28,0,1
+1791559553981,32,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,32,0,1
+1791559553986,28,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,28,0,2
+1791559553992,25,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,25,0,1
+1791559553992,27,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,27,0,1
+1791559553996,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,1
+1791559553996,26,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,2
+1791559554000,27,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,1
+1791559554001,27,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,27,0,1
+1791559554008,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,2
+1791559554008,27,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,27,0,2
+1791559554013,26,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,2
+1791559554015,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,1
+1791559554017,23,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,23,0,1
+1791559554019,25,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,25,0,2
+1791559554021,27,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,26,0,1
+1791559554023,25,GET /api/products,200,OK,① 只读 · 商品列表查询 1-11,text,true,,2167,144,10,10,http://127.0.0.1:5001/api/products?page=1&size=10,25,0,1
+1791559554027,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,1
+1791559554028,25,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,25,0,2
+1791559554032,25,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,2
+1791559554036,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,1
+1791559554039,21,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,21,0,1
+1791559554039,23,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,23,0,2
+1791559554044,23,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,23,0,1
+1791559554040,28,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,28,0,1
+1791559554048,24,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,24,0,2
+1791559554052,21,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,21,0,1
+1791559554053,23,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,23,0,1
+1791559554057,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554060,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-12,text,true,,2167,144,9,9,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554060,22,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,22,0,2
+1791559554063,25,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,25,0,1
+1791559554067,21,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,21,0,2
+1791559554068,22,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,22,0,1
+1791559554072,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554074,21,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,21,0,1
+1791559554076,21,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,21,0,1
+1791559554077,22,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,22,0,1
+1791559554083,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,2
+1791559554088,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,2
+1791559554089,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,18,0,1
+1791559554090,18,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,18,0,1
+1791559554091,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,1
+1791559554095,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554098,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554100,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,2
+1791559554103,21,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,21,0,1
+1791559554107,17,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,17,0,1
+1791559554108,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,1
+1791559554109,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,1
+1791559554111,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-13,text,true,,2167,144,8,8,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,1
+1791559554114,21,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,7,7,http://127.0.0.1:5001/api/products?page=1&size=10,21,0,1
+1791559554118,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,7,7,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554121,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,7,7,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554124,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,7,7,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554124,20,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,7,7,http://127.0.0.1:5001/api/products?page=1&size=10,20,0,2
+1791559554128,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,7,7,http://127.0.0.1:5001/api/products?page=1&size=10,18,0,1
+1791559554129,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-14,text,true,,2167,144,7,7,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554135,17,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,6,6,http://127.0.0.1:5001/api/products?page=1&size=10,17,0,2
+1791559554138,16,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,6,6,http://127.0.0.1:5001/api/products?page=1&size=10,16,0,1
+1791559554140,16,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,6,6,http://127.0.0.1:5001/api/products?page=1&size=10,16,0,1
+1791559554143,17,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,6,6,http://127.0.0.1:5001/api/products?page=1&size=10,17,0,1
+1791559554144,19,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,6,6,http://127.0.0.1:5001/api/products?page=1&size=10,19,0,1
+1791559554147,16,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,6,6,http://127.0.0.1:5001/api/products?page=1&size=10,16,0,1
+1791559554153,14,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,6,6,http://127.0.0.1:5001/api/products?page=1&size=10,14,0,1
+1791559554154,13,GET /api/products,200,OK,① 只读 · 商品列表查询 1-15,text,true,,2167,144,6,6,http://127.0.0.1:5001/api/products?page=1&size=10,13,0,2
+1791559554156,17,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,5,5,http://127.0.0.1:5001/api/products?page=1&size=10,17,0,2
+1791559554160,14,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,5,5,http://127.0.0.1:5001/api/products?page=1&size=10,14,0,2
+1791559554163,15,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,5,5,http://127.0.0.1:5001/api/products?page=1&size=10,15,0,2
+1791559554163,17,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,5,5,http://127.0.0.1:5001/api/products?page=1&size=10,17,0,2
+1791559554168,14,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,5,5,http://127.0.0.1:5001/api/products?page=1&size=10,14,0,1
+1791559554173,12,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,5,5,http://127.0.0.1:5001/api/products?page=1&size=10,12,0,2
+1791559554174,13,GET /api/products,200,OK,① 只读 · 商品列表查询 1-16,text,true,,2167,144,5,5,http://127.0.0.1:5001/api/products?page=1&size=10,13,0,2
+1791559554178,14,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,4,4,http://127.0.0.1:5001/api/products?page=1&size=10,14,0,1
+1791559554180,14,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,4,4,http://127.0.0.1:5001/api/products?page=1&size=10,14,0,2
+1791559554182,15,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,4,4,http://127.0.0.1:5001/api/products?page=1&size=10,15,0,1
+1791559554186,14,GET /api/products,200,OK,① 只读 · 商品列表查询 1-17,text,true,,2167,144,4,4,http://127.0.0.1:5001/api/products?page=1&size=10,13,0,1
+1791559554193,10,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,3,3,http://127.0.0.1:5001/api/products?page=1&size=10,10,0,1
+1791559554194,10,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,3,3,http://127.0.0.1:5001/api/products?page=1&size=10,10,0,2
+1791559554197,8,GET /api/products,200,OK,① 只读 · 商品列表查询 1-18,text,true,,2167,144,3,3,http://127.0.0.1:5001/api/products?page=1&size=10,8,0,1
+1791559554203,7,GET /api/products,200,OK,① 只读 · 商品列表查询 1-19,text,true,,2167,144,2,2,http://127.0.0.1:5001/api/products?page=1&size=10,7,0,1
+1791559554204,9,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,1,1,http://127.0.0.1:5001/api/products?page=1&size=10,9,0,1
+1791559554213,4,GET /api/products,200,OK,① 只读 · 商品列表查询 1-20,text,true,,2167,144,1,1,http://127.0.0.1:5001/api/products?page=1&size=10,4,0,1
