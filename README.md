@@ -1,5 +1,7 @@
 # 易淘商城 easybuy-mall
 
+![接口自动化测试](https://github.com/zZ8B8/easybuy-mall-test/actions/workflows/ci.yml/badge.svg)
+
 一个完整的 B2C 电商系统，用作**软件测试练习靶场**：能真实下单、扣库存、支付、取消，
 也能真实地把库存扣成负数、把已取消的订单支付成功。
 
