@@ -344,14 +344,13 @@ def _load_user_coupon(user_id, user_coupon_id):
 def _calc_discount(coupon, total):
     """按券型算出这张券能减多少钱，返回 Decimal。
 
-    ⚠️ 缺陷 BUG-007（高 · 金额计算）：
+    ✅ 已修复（原 BUG-007 · 高 · 金额计算）：
       DISCOUNT 券的 value 是**折扣率**：value=0.88 表示「88 折」，
-      用户应该实付 88%、平台让利 12%。
-      但这里把 value 当成了**减免比例**，写成了 discount = total × 0.88。
-      199 元的订单本该减 23.88 元（实付 175.12），
-      实际减了 175.12 元，实付只剩 23.88 元。
-      这张券每用一次，平台就少收 12% 的钱。
-      跑一遍正常流程根本看不出来，必须拿需求里的算例去核对金额。
+      用户实付 88%、平台让利 12%，即 discount = total × (1 - value)。
+      修复前误写成 discount = total × value（把折扣率当成减免比例），
+      199 元订单会被减掉 175.12 元、实付只剩 23.88 元，单笔少收 151.24 元；
+      且金额恒等式「实付 = 小计 − 优惠」依然成立，只做对账根本发现不了。
+      回归用例：tests/bugs/test_bug_coupon_discount.py
     """
     total = decimal.Decimal(str(total))
 
@@ -365,7 +364,9 @@ def _calc_discount(coupon, total):
         )
 
     if coupon["type"] == COUPON_DISCOUNT:
-        discount = (total * decimal.Decimal(str(coupon["value"]))).quantize(_CENT)
+        # value 是折扣率（0.88 ＝ 88 折），用户实付 value 比例，平台让利 (1 - value)
+        rate = decimal.Decimal(str(coupon["value"]))
+        discount = (total * (decimal.Decimal("1") - rate)).quantize(_CENT)
     else:
         # THRESHOLD 满减 / FREE 无门槛：value 就是减免金额
         discount = decimal.Decimal(str(coupon["value"]))
@@ -538,15 +539,23 @@ def get_order(order_id):
 def pay_order(order_id, pay_type=None):
     """支付订单。
 
-    ⚠️ 缺陷 BUG-001（高 · 状态机）：
-      这里直接改状态，没有先检查订单当前状态。
-      所以一笔已经 **取消** 的订单，仍然可以被支付成功（PENDING->PAID 和
-      CANCELLED->PAID 都放行了），状态机被打穿。
-      正确的做法是：只有 PENDING 状态才允许支付，其余返回 400。
+    ✅ 已修复（原 BUG-001 · 高 · 状态机）：
+      修复前直接改状态、不校验订单当前状态，
+      一笔已经**取消**的订单仍可被支付成功（CANCELLED -> PAID），
+      造成「钱收了、库存没扣」的账实不符。
+      现在只有 PENDING 允许支付，其余一律 400 INVALID_STATUS。
+      回归用例：tests/bugs/test_bug_order_state.py
     """
     order = db.fetch_one("SELECT id, status FROM orders WHERE id = %s", (order_id,))
     if not order:
         raise ApiError("ORDER_NOT_FOUND", "订单不存在", 404)
+
+    if order["status"] != ORDER_PENDING:
+        raise ApiError(
+            "INVALID_STATUS",
+            "订单当前状态为 %s，不可支付" % order["status"],
+            400,
+        )
 
     db.execute(
         "UPDATE orders SET status = %s, pay_type = %s, paid_at = NOW() WHERE id = %s",

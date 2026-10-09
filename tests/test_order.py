@@ -222,15 +222,16 @@ class TestPayOrder:
         assert status == 404
 
     def test_pay_twice(self, user_a):
-        """幂等性：重复支付同一订单
+        """幂等性：重复支付同一订单应被拒绝
 
-        当前实现允许重复支付（第二次会刷新支付时间），
-        严格来说应当拒绝 —— 与 BUG-001 同源。
+        修复 BUG-001 时一并覆盖：pay_order 现在只放行 PENDING 状态，
+        第二次支付返回 400 INVALID_STATUS。
         """
         order = make_order(user_a, 1, 1)
         assert user_a.pay(order["id"])[0] == 200
         status, body = user_a.pay(order["id"])
-        assert status == 200, "当前实现允许重复支付"
+        assert status == 400, "重复支付应被拒绝"
+        assert body["code"] == "INVALID_STATUS"
 
 
 # ======================================================================
